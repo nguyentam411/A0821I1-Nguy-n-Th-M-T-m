@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>Caculator</h2>
+<input  id="number1">
+<input  id="number2">
+<br><br>
+<button id="add" onclick="add()" value="add">Addition(+)</button>
+<button id="sub" onclick="sub()" value="sub">Subtraction(-)</button>
+<button id="mul" onclick="mul()" value="mul">Multiplication(*)</button>
+<button id="divi" onclick="divi()" value="divi">Division(/)</button>
+<h3 id="result">Result</h3>
+</body>
+<script>
+
+
+    function add() {
+        let add = document.getElementById('add').value;
+        let number1=document.getElementById('number1').value;
+        let number2=document.getElementById('number2').value;
+            result = parseInt(number1)+parseInt(number2);
+            document.getElementById('result').innerText ='Result Addition:' + result;
+         }
+
+        function sub() {
+            let sub = document.getElementById('sub').value;
+            let number1=document.getElementById('number1').value;
+            let number2=document.getElementById('number2').value;
+            result = parseInt(number1)-parseInt(number2);
+            document.getElementById('result').innerText ='Result Subtraction:' +result;
+
+        }
+
+        function mul() {
+            let mul = document.getElementById('mul').value;
+            let number1=document.getElementById('number1').value;
+            let number2=document.getElementById('number2').value;
+            result = parseInt(number1) * parseInt(number2);
+            document.getElementById('result').innerText ='Result Multiplication:'+ result;
+
+        }
+
+        function divi() {
+            let divi = document.getElementById('divi').value;
+            let number1 = document.getElementById('number1').value;
+            let number2 = document.getElementById('number2').value;
+            result = parseInt(number1) / parseInt(number2);
+            document.getElementById('result').innerText ='Result Division:' +result;
+
+        }
+
+</script>
+</html>
