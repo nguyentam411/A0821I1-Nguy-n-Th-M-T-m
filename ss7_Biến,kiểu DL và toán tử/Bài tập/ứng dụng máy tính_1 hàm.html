@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>Caculator</h2>
+<input id="number1">
+<input id="number2">
+<br><br>
+<button  onclick="NHAP('+')" >Addition(+)</button>
+<button  onclick="NHAP('-')" >Subtraction(-)</button>
+<button  onclick="NHAP('*')" >Multiplication(*)</button>
+<button  onclick="NHAP('/')" >Division(/)</button>
+<h3 id="result">Result</h3>
+<script>
+    function NHAP(input) {
+        let result = document.getElementById("result").innerText;
+        let number1 = document.getElementById('number1').value;
+        let number2 = document.getElementById('number2').value;
+        switch (input) {
+            case "+" :
+                result = parseInt(number1)  + parseInt(number2);
+                document.getElementById('result').innerText = 'Result Addition:' + result;
+                break;
+            case "-":
+                result = parseInt(number1) - parseInt(number2);
+                document.getElementById('result').innerText ='Result Subtraction:' +result;
+                break;
+            case "*":
+                result = parseInt(number1) * parseInt(number2);
+                document.getElementById('result').innerText ='Result Multiplication:'+ result;
+                break;
+            case "/":
+                result = parseInt(number1) / parseInt(number2);
+                document.getElementById('result').innerText ='Result Division:' +result;
+                break;
+        }
+    }
+</script>
+</body>
+</html>
