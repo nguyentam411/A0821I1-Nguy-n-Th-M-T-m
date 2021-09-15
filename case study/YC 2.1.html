@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let salary = parseInt(prompt('Nhập số lương của bạn: ? triệu'));
+    let tax;
+    let result;
+    if (salary === 15) {
+        tax = salary * 0.2;
+            result=salary-tax;
+    }else if(7<=salary<15){
+        tax=salary*0.1;
+        result=salary-tax;
+    }else if(salary<7){
+        tax=salary*0.05;
+        result=salary-tax;
+    }
+    alert('Thuế thu nhập cá nhân của bạn là '+tax+' triệu');
+    alert('Số lương thực bạn được nhận là '+result +' triệu');
+</script>
+</body>
+</html>
