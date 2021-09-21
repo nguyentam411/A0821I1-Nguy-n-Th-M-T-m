@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let money=parseInt(prompt('Nhập số tiền ban đầu:? triệu'));
+    let lai=prompt('Nhập số lãi xuất hàng tháng:');
+    let n=prompt('Nhập số tháng cho vay:');
+    let total=0;
+    let result=0;
+    for (let i = 1; i <=n ; i++) {
+        total=total+(money+total)*(lai/100);
+    }
+    alert('Số tiền lãi cần trả là: '+total+' triệu');
+</script>
+</body>
+</html>

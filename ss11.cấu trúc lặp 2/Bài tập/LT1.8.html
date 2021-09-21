@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button onClick="play()" style="">Chơi</button>
+<script>
+    function play() {
+        let input;
+        let result;
+        let canTren = parseInt(prompt('Nhập khoảng muốn đoán từ'));
+        let canDuoi = parseInt(prompt('đến'));
+        for (let i = 1; i <= 3; i++) {
+            input = parseInt(prompt('Nhập số bạn đoán:'));
+            result = Math.round(Math.random() * (canDuoi - canTren) + canTren);
+            if (input === result) {
+                alert('Chúc mừng bạn')
+                break;
+            } else if (input > result) {
+                alert('Số của bạn lớn hơn kết quả')
+            } else {
+                alert('Số của bạn bé hơn kết quả')
+            }
+        }
+    }
+</script>
+
+</body>
+</html>

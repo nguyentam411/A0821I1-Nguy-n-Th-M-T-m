@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let fn = 0;
+    let f1 = 0;
+    let f2 = 1;
+    for (let i = 0; i <= 17; i++) {
+        fn = f1 + f2;
+        f1 = f2;
+        f2 = fn;
+        if (fn%5===0){
+            alert('Số đầu tiên trong dãy fibonacci chia hết cho 5(trừ 0) là '+fn);
+            break;
+        }
+    }
+</script>
+</body>
+</html>
