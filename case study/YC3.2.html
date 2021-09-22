@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = [];
+    let b = [];
+    let c = [];
+    let check;
+    let n = prompt('Nhập số phần tử của mảng A:');
+    for (let i = 0; i < n; i++) {
+        let input = parseInt(prompt('Nhập các phần tử của mảng A:'))
+        a.push(input);
+    }
+    let m = prompt('Nhập số phần tử của mảng B:');
+    for (let j = 0; j < m; j++) {
+        let input = parseInt(prompt('Nhập các phần tử của mảng B:'))
+        b.push(input);
+    }
+    if (n < m) {
+        check = m
+    } else check = n
+    for (let i = 0; i < check; i++) {
+        let index = a.indexOf(b[i]);
+        if (index === -1) {
+            c.push(b[i]);
+        }
+    }
+    alert('Kết quả missingValue(A,B)=[' + c+']')
+
+</script>
+</body>
+</html>
