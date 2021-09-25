@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr=[];
+  for (let i=0;i<10;i++){
+      let element=parseInt(prompt('Nhập 10 số nguyên khác nhau của mảng:'));
+      arr.push(element)
+  }
+  let max=arr[0];
+  let vitri=0;
+  for (let j=0;j<10;j++){
+      if (arr[j]>max){
+          max=arr[j]
+          vitri=j
+      }
+  }
+  alert(arr)
+  alert('Gía trị lớn nhất của mảng là '+max+' tại vị trí '+vitri);
+</script>
+</body>
+</html>
