@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr = [];
+    let n = prompt('Số kí tự muốn nhập là:');
+    for (let i = 0; i < n; i++) {
+        let element = prompt('Nhập phần tử của mảng:')
+        arr.push(element)
+    }
+    for (let j = 0; j < n; j++) {
+        if (arr[j] === '-') {
+            arr[j]='_'
+        }
+    }
+    alert(arr);
+</script>
+</body>
+</html>
