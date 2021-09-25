@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input id="input">
+<button onclick="fin()">Dịch</button>
+<script>
+    function fin() {
+        let find = document.getElementById("input").value;
+        let eng = ['name', 'age'];
+        let viet = ['tên', 'tuổi'];
+        let result = false;
+        let check=0;
+        for (let i = 0; i < eng.length; i++) {
+            if (find === eng[i]) {
+                result = true
+                check=i;
+            }
+        }
+        if (result===true){
+            alert('Nghĩa Tiếng Việt là '+viet[check])
+        }else {
+            alert('Không tìm thấy')
+        }
+    }
+
+</script>
+</body>
+</html>
