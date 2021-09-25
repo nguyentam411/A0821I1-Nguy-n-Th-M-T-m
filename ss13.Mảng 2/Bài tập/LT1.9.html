@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = [];
+    for (let i = 0; i < 10; i++) {
+        let element1 = parseInt(prompt('Nhập 10 phần tử của mẳng a:'))
+        a.push(element1)
+    }
+    let b = [];
+    for (let j = 0; j < 10; j++) {
+        let element2 = parseInt(prompt('Nhập 10 phần tử của mảng b: '))
+        b.push(element2);
+    }
+    let c=a.concat(b);
+    alert('Mảng c là ['+c+']')
+
+</script>
+</body>
+</html>

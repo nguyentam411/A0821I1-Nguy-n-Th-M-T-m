@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr = [];
+    let n = prompt('Nhập số lượng số cần nhập');
+    let count = 0;
+    for (let i = 0; i < n; i++) {
+        let element = prompt('Nhập các số trong mảng:');
+        arr.push(element)
+        if (arr[i] < 0) {
+            count++
+        }
+    }
+    alert('Số lượng số nguyên âm trong chuỗi là '+count)
+</script>
+</body>
+</html>

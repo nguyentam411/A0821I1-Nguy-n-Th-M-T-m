@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr = [];
+    let count = 0
+    for (let i = 0; i < 10; i++) {
+        let element = parseInt(prompt('Nhập các phần tử của mảng(10 phần tử): '))
+        arr.push(element)
+        if (element >= 10) {
+            count++
+        }
+    }
+    alert('Số số nguyên lớn hơn hoặc bằng 10 có trong mảng là: ' + count);
+
+</script>
+</body>
+</html>

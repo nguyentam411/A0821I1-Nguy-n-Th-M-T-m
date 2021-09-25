@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr = [];
+    for (let i = 0; i < 10; i++) {
+        let element = parseInt(prompt('Nhập các phần tử của mảng(10 phần tử): '))
+        arr.push(element)
+    }
+    arr.sort(function (a,b){
+        return b-a;
+    })
+    alert(arr);
+</script>
+</body>
+</html>
