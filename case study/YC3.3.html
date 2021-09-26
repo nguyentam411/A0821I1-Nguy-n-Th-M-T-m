@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let numerators = [];
+    let denominators = [];
+    for (let i = 0; ; i++) {
+        let element1 = parseInt(prompt('Nhập tử số(nhập 0 để kết thúc)'))
+        if (element1 !== 0) {
+            numerators.push(element1)
+        }else {
+            break
+        }
+    }
+    for (let j = 0; j < numerators.length; j++) {
+        let element2 = parseInt(prompt('Nhập mẫu số tương ứng'))
+        denominators.push(element2)
+    }
+    let max=numerators[0]/denominators[0];
+    let vitri=0;
+    for (let k=0;k<numerators.length;k++){
+        if (numerators[k]/denominators[k]>max){
+            max=numerators[k]/denominators[k]
+            vitri=k
+        }
+    }
+    alert('Phân số lớn nhất là '+numerators[vitri]+'/'+denominators[vitri]+' ,có chỉ số  là '+vitri)
+</script>
+</body>
+</html>
