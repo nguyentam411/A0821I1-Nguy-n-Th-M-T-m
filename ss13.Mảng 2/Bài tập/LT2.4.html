@@ -7,9 +7,10 @@
 <body>
 <script>
     let str=prompt('Nhập 1 chuỗi bất kì');
+    str=str.trim();
     let count=1;
     for (let i=0;i<str.length;i++){
-        if(str[i]===' '){
+        if(str[i]===' '&&str[i-1]!==' '){
             count++
         }
     }
