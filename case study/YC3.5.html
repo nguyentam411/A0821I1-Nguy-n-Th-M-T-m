@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>MENU</h1>
+<h2>1.Cafe</h2>
+<h2>2.Cam vắt</h2>
+<h2>3.Nước ép cà rốt</h2>
+<h2>4.Nước ép cà chua</h2>
+<h2>5.Nước lọc</h2>
+<h2>6.Nước dừa</h2>
+<h2>7.Thoát gọi món</h2>
+
+<button onclick="call()">Chọn món</button>
+<script>
+    let arr = [10000, 15000, 20000, 20000, 5000, 20000];
+    let bill = [];
+    let result = 0;
+    let total = 0;
+
+    function call() {
+        let buy;
+        do {
+            buy = parseInt(prompt('Mời chọn món(theo số):'));
+            for (let i = 1; i < 7; i++) {
+                if (buy === i) {
+                    alert('Gía ' + arr[i - 1]);
+                    let n = parseInt(prompt('Nhập số lượng cần mua:'));
+                    result = arr[i - 1] * n;
+                    bill.push(result);
+                }
+            }
+        } while (buy < 7)
+        for (let j = 0; j < bill.length; j++) {
+            total += bill[j]
+        }
+        document.write('Tổng tiền là ' + total + ' VND')
+    }
+</script>
+</body>
+</html>
