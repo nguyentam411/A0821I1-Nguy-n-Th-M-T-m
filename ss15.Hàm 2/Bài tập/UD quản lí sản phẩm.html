@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        tr:nth-child(even)
+        {
+            background-color: gainsboro;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+<label for="input">Add new Product</label><br>
+<input type="text" placeholder="Nhập tên sản phẩm" id="input"  >
+<button onclick="addNewProduct()">Add</button>
+<div id="display">
+
+</div>
+</body>
+<script>
+    let productList = ["Sony Xperia","Samsung Galaxy","Nokia 6","Xiaomi Redmi Note 4","Apple iPhone 6S","Xiami Mi 5s Plus","Apple iPhone 8 Plus","Fujitsu F04-E","Oppo A71"];
+
+    function display() {
+        let table = "<table   cellpadding='10px' cellspacing='0px'>" +
+            "<tr> <th>Product Name</th></tr>";
+        //Duyệt mảng để hiển thị từng giá trị của mảng. Mỗi vòng lặp là 1 dòng.
+        for (let i = 0; i < productList.length; i++) {
+            table += "<tr>" +
+                "<td>" + productList[i] + "</td>" +
+                "<td><button onclick='editProduct(" + i + ")'>Edit</button></td>" +
+                "<td><button onclick='deleteProduct(" + i + ")'>Delete</button></td>" +
+                "</tr>"
+        }
+        table += "</table>"
+        document.getElementById('display').innerHTML = table;
+    }
+
+    function addNewProduct() {
+        let product = document.getElementById('input').value;
+        productList.push(product);
+        document.getElementById('input').value = "";
+        display();
+    }
+
+    function editProduct(index) {
+        productList[index] = prompt("Nhập tên mới: ");
+        display();
+    }
+
+    function deleteProduct(index) {
+        let check = confirm("Bạn có muốn xóa sản phẩm " + productList[index] + " Không?");
+        if (check === true){
+            productList.splice(index, 1);
+            display();
+        }
+    }
+
+    display();
+</script>
+</html>

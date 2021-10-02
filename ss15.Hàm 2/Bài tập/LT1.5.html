@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let star = prompt('Nhập tên ngôi sao');
+    let arr1 = ['Polaris', 'Aldebaran', 'Deneb', 'Vega', 'Altair', 'Dubhe', 'Regulus'];
+    let arr2 = ['Ursa Minor', 'Tarurus', 'Cygnus', 'Lyra', 'Aquila', 'Ursa Major', 'Leo'];
+
+    function call(star) {
+        let result
+        for (let i = 0; i < arr1.length; i++) {
+            if (star === arr1[i]) {
+                result = arr2[i];
+            }
+        }
+        return result;
+    }
+
+    let result = call(star);
+    if (result !== undefined) {
+        alert(result);
+    } else {
+        alert('Không tìm thấy')
+    }
+</script>
+</body>
+</html>
