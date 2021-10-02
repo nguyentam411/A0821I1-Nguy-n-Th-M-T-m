@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr = [];
+
+    function call() {
+        for (let i = 0; ; i++) {
+            let a = parseInt(prompt('Nhập số nguyên (nhập 0 để dừng)'));
+            if (a === 0) {
+                break
+            }
+            arr.push(a);
+        }
+        return arr.reverse();
+    }
+
+    let result = call();
+    alert('Mảng đảo ngược là ' + result);
+
+</script>
+</body>
+</html>

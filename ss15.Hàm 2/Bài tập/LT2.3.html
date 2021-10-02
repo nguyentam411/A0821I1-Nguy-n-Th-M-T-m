@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function call() {
+        let a = parseInt(prompt('Nhập 1 số bất kì'));
+        let result=1;
+        for (let i = 1; i <= a; i++) {
+            result = result * i;
+        }
+        return result;
+    }
+    let result2 = call();
+    alert('Giai thừa của số đó là ' + result2);
+</script>
+</body>
+</html>

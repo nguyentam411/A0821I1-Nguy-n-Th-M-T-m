@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr = [];
+
+    function call() {
+        for (let i = 0; ; i++) {
+            let a = prompt('Nhập kí tự(nhập 0 để dừng)');
+            if (a == 0) {
+                break;
+            }
+            arr.push(a);
+        }
+        let b = prompt('Nhập kí tự muốn tìm');
+        let count = 0;
+        let result = 0;
+        for (let j = 0; j < arr.length; j++) {
+            if (b == arr[j]) {
+                count++;
+            }
+        }
+        return count;
+    }
+
+    let result = call();
+    if (result === 0) {
+        alert('-1')
+    } else {
+        alert(result);
+    }
+</script>
+</body>
+</html>

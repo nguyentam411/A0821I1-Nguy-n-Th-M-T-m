@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function call() {
+        let a = parseInt(prompt('Nhập số nguyên thứ 1'));
+        let b = parseInt(prompt('Nhập số nguyên thứ 2'));
+        let c = parseInt(prompt('Nhập số nguyên thứ 3'));
+        let min = a;
+        if (b < min) {
+            min = b;
+        } else if (c < min) {
+            min = c;
+        }
+        return min;
+    }
+
+    let result = call();
+    alert('Số nhỏ nhất là ' + result)
+
+</script>
+</body>
+</html>
