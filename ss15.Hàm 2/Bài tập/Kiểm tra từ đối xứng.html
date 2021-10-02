@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let str = prompt('Nhập chuỗi');
+
+    function isPalindrome(str) {
+        let arr = str.split("");
+
+        if (arr.length <= 1) {
+            return true;
+        }
+        if (arr[0] === arr[arr.length - 1]) {
+            arr.shift();
+            arr.pop();
+        } else {
+            return false;
+        }
+        str = arr.join("");
+        return isPalindrome(str);
+    }
+
+    let check = isPalindrome(str);
+    if (check) {
+        alert("Chuỗi đối xứng!")
+    } else {
+        alert("Ko phải chuỗi đối xứng!")
+    }
+</script>
+</body>
+</html>
