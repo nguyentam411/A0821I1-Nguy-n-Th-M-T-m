@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let m = parseInt(prompt('Nhập số hàng của mảng'));
+    let n = parseInt(prompt('Nhập số cột của mảng'));
+
+    function call() {
+        let arr = new Array(m);
+        for (let i = 0; i < m; i++) {
+            arr[i] = new Array(n);
+            for (let j = 0; j < n; j++) {
+                arr[i][j] = parseInt(prompt('Nhập phần tử mảng[' + i + ']' + '[' + j + ']'))
+            }
+        }
+        let min = arr[0][0];
+        let max=arr[0][0];
+        let minMax=[];
+        for (let i = 0; i < m; i++) {
+            for (let j = 0; j < n; j++) {
+                if (arr[i][j] <min) {
+                    min=arr[i][j];
+                }
+                if (arr[i][j]>max){
+                    max=arr[i][j];
+                }
+            }
+        }
+        minMax.push(min);
+        minMax.push(max);
+        return minMax
+    }
+
+    let result = call();
+    document.write('GTNN và GTLN của mảng lần lượt là '+ result)
+</script>
+</body>
+</html>
