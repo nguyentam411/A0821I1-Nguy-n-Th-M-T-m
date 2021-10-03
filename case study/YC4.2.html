@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let str = prompt('Nhập xâu');
+    let arr = str.split("");
+    let count = 0
+    for (let i = 0; i < arr.length; i++) {
+        if (arr.indexOf(arr[i]) === arr.lastIndexOf(arr[i])) {
+            count++
+        } else {
+            arr.splice(arr.lastIndexOf(arr[i]), 1)
+            i--
+        }
+    }
+    document.write('Số kí tự khác nhau là ' + count+"<br>");
+    document.write('Đó là ' + arr)
+</script>
+</body>
+</html>
