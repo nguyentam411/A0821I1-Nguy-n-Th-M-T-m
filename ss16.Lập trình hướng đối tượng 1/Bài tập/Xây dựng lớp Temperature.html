@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class NhietDo{
+        constructor(doC) {
+            this.doC=doC;
+        }
+        toF(){
+            this.toF=(this.doC*1.8)+32;
+            return this.toF;
+        }
+        toK(){
+            this.toK=this.doC+273.15;
+            return this.toK;
+        }
+    }
+    let độC=new NhietDo(25)
+    document.write('Số độ F là: '+độC.toF()+'<br>');
+    document.write('Số độ K là: '+độC.toK())
+</script>
+</body>
+</html>
