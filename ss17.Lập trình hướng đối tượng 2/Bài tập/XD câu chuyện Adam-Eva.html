@@ -12,8 +12,8 @@
         }
 
         decrease() {
-            if (this.weight>0)
-            this.weight--
+            if (this.weight > 0)
+                this.weight--
         }
 
         getWeight() {
@@ -32,14 +32,14 @@
     class Human {
         constructor(name, gender, weight) {
             this.name = name;
-            this.gender = true;
+            this.gender = gender;
             this.weight = weight;
         }
 
         isMale() {
-            if (this.gender) {
+            if (this.gender===true) {
                 console.log('Male');
-            } else {
+            } else if (this.gender===false){
                 console.log('Female')
             }
         }
@@ -79,16 +79,24 @@
 
     }
 
-    let adam = new Human('Adam', true, 100);
+    let adam = new Human('Adam', true, 50);
+    let eva = new Human('Eva', false, 40)
     let apple = new Apple(10);
     console.log(adam.getName());
     adam.isMale();
-    console.log(adam.getWeight())
+    console.log('Cân nặng của Adam là '+adam.getWeight())
     adam.sayString();
+    console.log(eva.getName());
+    eva.isMale();
+    console.log('Cân nặng của Eva là '+eva.getWeight())
+    eva.sayString();
     adam.eatApple(apple);
-    console.log(apple.getWeight());
-    console.log(adam.getWeight());
+    eva.eatApple(apple);
+    console.log('Táo còn '+apple.getWeight());
+    console.log('Cân nặng của Adam là sau khi ăn là '+adam.getWeight())
+    console.log('Cân nặng của Eva là sau khi ăn là '+eva.getWeight())
     adam.checkApple(apple);
+    eva.checkApple(apple);
 
 </script>
 </body>
