@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+
+    class Mobile {
+        constructor() {
+            this.pin = 100;
+            this.receivedMessage = [];
+            this.sentMessage = [];
+            this.status = true;
+            this.message = [];
+        }
+
+        getStatus() {
+            return this.status;
+        }
+
+        setStatus() {
+            if (this.status) {
+                let check = confirm("Bạn có muốn tắt điện thoại không!");
+                if (check) {
+                    alert("Đã tắt điện thoại!");
+                    this.status = false;
+                }
+            } else {
+                alert("Đã bặt điện thoại!");
+                this.status = true;
+            }
+        }
+
+        sendMessage(sentMessage, iphone) {
+            if (this.status) {
+                this.sentMessage.push(sentMessage);
+                iphone.receiveMessage(sentMessage);
+                this.pin--;
+            }
+        }
+
+
+        receiveMessage(receivedMessage) {
+            if (this.status) {
+                this.receivedMessage.push(receivedMessage);
+                this.pin--;
+            }
+        }
+
+        checkPin() {
+            if (this.pin === 0) {
+                alert("Sạc đê!")
+            } else {
+                console.log(this.pin)
+            }
+
+        }
+
+        addMessage(message) {
+            this.message.push(message)
+        }
+
+        addPin() {
+            if (this.pin < 100) {
+                this.pin++
+            }else {
+                console.log('Pin đã đầy')
+            }
+        }
+    }
+
+    let iphone = new Mobile();
+    let nokia = new Mobile();
+    nokia.addMessage('hello')
+    nokia.sendMessage(nokia.message, iphone);
+    console.log("Tin đã gửi: " + nokia.sentMessage);
+    console.log("Tin Đã nhận: " + iphone.receivedMessage);
+    console.log("Pin còn: " + iphone.pin);
+    nokia.addPin();
+    console.log(nokia.pin)
+
+</script>
+</body>
+</html>
