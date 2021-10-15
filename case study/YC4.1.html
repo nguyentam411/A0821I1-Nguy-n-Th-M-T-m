@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function titleCase(str) {
+        let splitStr = str.toLowerCase().split(' ');
+        for (let i = 0; i < splitStr.length; i++) {
+            splitStr[i] = splitStr[i].charAt(0).toUpperCase() + splitStr[i].substring(1);
+        }
+        return splitStr.join(' ');
+    }
+    let str = prompt('Nhập chuỗi')
+    document.write(titleCase(str));
+</script>
+</body>
+</html>
