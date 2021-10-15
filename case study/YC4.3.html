@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function call(str) {
+        return str.split("");
+    }
+
+    let arr11 =  prompt('Nhập xâu');
+    let arr1=call(arr11)
+    let arr22 = prompt('Nhập xâu');
+    let arr2=call(arr22)
+    let count = 0;
+    for (let i = 0; i < arr1.length; i++) {
+        if (arr1.indexOf(arr1[i]) === arr1.lastIndexOf(arr1[i])) {
+            count++
+        } else {
+            arr1.splice(arr1.lastIndexOf(arr1[i]), 1)
+            i--
+        }
+    }
+    count=0;
+    for (let i = 0; i < arr2.length; i++) {
+        if (arr2.indexOf(arr2[i]) === arr2.lastIndexOf(arr2[i])) {
+            count++
+        } else {
+            arr2.splice(arr2.lastIndexOf(arr2[i]), 1)
+            i--
+        }
+    }
+    let same=[];
+    for(let i=0;i<arr1.length;i++){
+        for(let j=0;j<arr2.length;j++){
+            if (arr1[i]===arr2[j]){
+                same.push(arr2[j]);
+            }
+        }
+    }
+    let check1=0;
+    let recheck1=[];
+    for(let i=0;i<same.length;i++){
+        for (let j=0;j<arr11.length;j++){
+            if (same[i]===arr11[j]){
+                console.log(same[i])
+                check1++
+            }
+        }recheck1.push(check1);
+        check1=0;
+    }
+    let check2=0;
+    let recheck2=[];
+    for(let i=0;i<same.length;i++){
+        for (let j=0;j<arr22.length;j++){
+            if (same[i]===arr22[j]){
+                console.log(same[i])
+                check2++
+            }
+        }recheck2.push(check2);
+        check2=0;
+    }
+    for (let i=0;i<same.length;i++){
+        if (recheck1[i]<recheck2[i]){
+            document.write('Có '+recheck1[i]+' '+same[i]+' chung <br>')
+        }else {
+            document.write('Có '+recheck2[i]+' '+same[i]+' chung')
+        }
+    }
+</script>
+</body>
+</html>

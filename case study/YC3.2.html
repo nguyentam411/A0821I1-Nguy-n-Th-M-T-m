@@ -24,11 +24,12 @@
         check = m
     } else check = n
     for (let i = 0; i < check; i++) {
-        let index = a.indexOf(b[i]);
+        let index = a.indexOf(b[i])&&c.indexOf(b[i]);
         if (index === -1) {
             c.push(b[i]);
         }
     }
+    c.sort()
     alert('Kết quả missingValue(A,B)=[' + c+']')
 
 </script>
