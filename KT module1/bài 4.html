@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button onclick="add()">Thêm điện thoại</button>
+<h2>Danh sách điện thoại</h2>
+<div id="display">
+
+</div>
+<script>
+    class dienThoai {
+        constructor(id, name, hang, price) {
+            this.id = id;
+            this.name = name;
+            this.hang = hang;
+            this.price = price;
+        }
+
+        getId() {
+            return this.id;
+        }
+
+        getName() {
+            return this.name;
+        }
+
+        getHang() {
+            return this.hang;
+        }
+
+        getPrice() {
+            return this.price;
+        }
+
+        getInfor() {
+            return this.toString()
+        }
+
+        setId(value) {
+            this.id = value;
+        }
+
+        setName(value) {
+            this.name = value;
+        }
+
+        setHang(value) {
+            this.hang = value;
+        }
+
+        setPrice(value) {
+            this.price = value;
+        }
+
+        toString() {
+            return this.id + " " + this.name + " " + this.hang + " " + this.price;
+        }
+    }
+
+    let arr = [];
+
+    function add() {
+        let phone = new dienThoai();
+        phone.setId(prompt("Nhập mã :"));
+        phone.setName(prompt("Nhập tên :"));
+        phone.setHang(prompt("Nhập hãng :"));
+        phone.setPrice(parseInt(prompt("Nhập giá :")));
+        arr.push(phone);
+        arr.sort();
+        console.log(arr.toString());
+        document.getElementById("display").innerHTML = display();
+    }
+
+    function display() {
+        let table = "<table border='1px solid black' cellpadding='10px' cellspacing='0px'>" + "<tr><th>ID</th><th>NAME</th><th>HANG</th><th>GIA</th></tr>"
+        for (let i = 0; i < arr.length; i++) {
+            table += "<tr>";
+            table += "<td>" + arr[i].getId() + "</td>";
+            table += "<td>" + arr[i].getName() + "</td>";
+            table += "<td>" + arr[i].getHang() + "</td>";
+            table += "<td>" + arr[i].getPrice() + "</td>";
+            table += "</tr>";
+        }
+        return table;
+    }
+</script>
+</body>
+</html>
