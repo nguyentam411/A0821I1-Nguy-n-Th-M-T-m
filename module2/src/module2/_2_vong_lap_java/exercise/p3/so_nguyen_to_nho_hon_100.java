@@ -1,15 +1,9 @@
-package module2._2_vong_lap_java.exercise.p2;
+package module2._2_vong_lap_java.exercise.p3;
 
-import java.util.Scanner;
-
-public class _20_so_nguyen_to_dau {
+public class so_nguyen_to_nho_hon_100 {
     public static void main(String[] args){
-        Scanner scanner = new Scanner(System.in);
-        System.out.print("Nhap so luong so nguyen to can in:");
-        int number = scanner.nextInt();
-        int count=0;
         boolean check=true;
-        for (int i=2;count<number;i++){
+        for (int i=2;i<100;i++){
             if (i !=2) {
                 for (int j = 2; j < i; j++) {
                     if (i % j == 0) {
@@ -20,7 +14,6 @@ public class _20_so_nguyen_to_dau {
             }
             if (check){
                 System.out.println(i);
-                count++;
             }
             check=true;
         }
