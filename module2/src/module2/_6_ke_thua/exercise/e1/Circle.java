@@ -1,4 +1,4 @@
-package module2._6_ke_thua.exercise.p1;
+package module2._6_ke_thua.exercise.e1;
 
 public class Circle {
     private double radious = 1.0;

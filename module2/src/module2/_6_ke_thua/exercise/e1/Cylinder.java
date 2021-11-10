@@ -1,4 +1,4 @@
-package module2._6_ke_thua.exercise.p1;
+package module2._6_ke_thua.exercise.e1;
 
 public class Cylinder extends Circle {
     private double height=1.0;

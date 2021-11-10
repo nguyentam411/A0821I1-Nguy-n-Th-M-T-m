@@ -1,4 +1,4 @@
-package module2._6_ke_thua.exercise.p2;
+package module2._6_ke_thua.exercise.e2;
 
 import java.util.Arrays;
 
