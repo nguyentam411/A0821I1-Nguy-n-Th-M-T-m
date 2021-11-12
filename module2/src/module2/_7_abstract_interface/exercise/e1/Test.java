@@ -8,15 +8,21 @@ public class Test {
         resizeable[2]=new Square(4,"red",false);
         for (IResizeable result:resizeable){
             if (result instanceof  Circle){
+                System.out.println("Before:");
                 System.out.println(result);
+                System.out.println("After:");
                 result.resize(50);
                 System.out.println(result);
             }else if (result instanceof Rectangle){
+                System.out.println("Before:");
                 System.out.println(result);
+                System.out.println("After:");
                 result.resize(50);
                 System.out.println(result);
             }else {
+                System.out.println("Before:");
                 System.out.println(result);
+                System.out.println("After:");
                 result.resize(100);
                 System.out.println(result);
             }
