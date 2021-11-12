@@ -35,6 +35,8 @@ public class Square extends Rectangle implements IResizeable {
     public String toString() {
         return "A Square with side="
                 + getSide()
+                +", area: "
+                +getArea()
                 + ", which is a subclass of "
                 + super.toString();
     }
