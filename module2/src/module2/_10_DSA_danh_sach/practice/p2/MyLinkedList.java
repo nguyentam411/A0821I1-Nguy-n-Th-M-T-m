@@ -1,4 +1,4 @@
-package module2._9_DSA_danh_sach.practice.p2;
+package module2._10_DSA_danh_sach.practice.p2;
 
 public class MyLinkedList {
     private  Node head;

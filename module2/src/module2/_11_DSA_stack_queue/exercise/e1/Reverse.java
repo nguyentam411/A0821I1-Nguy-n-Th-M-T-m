@@ -1,4 +1,4 @@
-package module2._10_DSA_stack_queue.exercise.e1;
+package module2._11_DSA_stack_queue.exercise.e1;
 
 import java.util.LinkedList;
 

@@ -1,4 +1,4 @@
-package module2._9_DSA_danh_sach.practice.p1;
+package module2._10_DSA_danh_sach.practice.p1;
 
 public class MyListTest {
     public static void main(String[] args) {

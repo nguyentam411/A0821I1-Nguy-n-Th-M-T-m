@@ -1,4 +1,4 @@
-package module2._10_DSA_stack_queue.exercise.e2;
+package module2._11_DSA_stack_queue.exercise.e2;
 
 import java.util.Map;
 import java.util.TreeMap;
