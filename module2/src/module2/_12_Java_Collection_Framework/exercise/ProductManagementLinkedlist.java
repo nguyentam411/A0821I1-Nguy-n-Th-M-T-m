@@ -10,7 +10,6 @@ public class ProductManagementLinkedlist {
         productList.add(product1);
         Product product2 = new Product(2, "cake", 20);
         productList.add(product2);
-        int size = productList.size();
 
         int choice;
         do {
@@ -28,8 +27,7 @@ public class ProductManagementLinkedlist {
             choice = scanner.nextInt();
             switch (choice) {
                 case 1:
-                    System.out.println("Nhập mã sản phẩm:");
-                    int id = scanner.nextInt();
+                    int id = productList.size()+1;
                     scanner.nextLine();
                     System.out.println("Nhập tên sản phẩm:");
                     String name = scanner.nextLine();
@@ -42,7 +40,7 @@ public class ProductManagementLinkedlist {
                 case 2:
                     System.out.println("Sửa thông tin sản phẩm");
                     System.out.println("Nhập id muốn sửa:");
-                    for (int i = 0; i < size; i++) {
+                    for (int i = 0; i < productList.size(); i++) {
                         if (productList.get(i).getId() == scanner.nextInt()) {
                             scanner.nextLine();
                             System.out.println("Nhập tên:");
@@ -56,7 +54,7 @@ public class ProductManagementLinkedlist {
                 case 3:
                     System.out.println("Xóa sản phẩm-----");
                     System.out.println("Nhập id muốn xóa:");
-                    for (int i = 0; i < size; i++) {
+                    for (int i = 0; i < productList.size(); i++) {
                         if (productList.get(i).getId() == scanner.nextInt()) {
                             productList.remove(i);
                         }

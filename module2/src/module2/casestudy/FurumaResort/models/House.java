@@ -1,6 +1,6 @@
 package module2.casestudy.FurumaResort.models;
 
-import furama_resort.util.ConstantUtil;
+import module2.casestudy.FurumaResort.utils.ConstantUtil;
 
 public class House extends Facility {
     private ConstantUtil.RoomType roomType;
