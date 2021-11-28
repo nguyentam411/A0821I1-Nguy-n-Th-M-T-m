@@ -43,8 +43,9 @@ public class ProductManagementArraylist {
                 case 2:
                     System.out.println("Sửa thông tin sản phẩm");
                     System.out.println("Nhập id muốn sửa:");
+                    int input=scanner.nextInt();
                     for (int i = 0; i < productList.size(); i++) {
-                        if (productList.get(i).getId() == scanner.nextInt()) {
+                        if (productList.get(i).getId() == input) {
                             scanner.nextLine();
                             System.out.println("Nhập tên:");
                             productList.get(i).setName(scanner.nextLine());
@@ -57,11 +58,14 @@ public class ProductManagementArraylist {
                 case 3:
                     System.out.println("Xóa sản phẩm-----");
                     System.out.println("Nhập id muốn xóa:");
+                    int inputDelete=scanner.nextInt();
                     for (int i = 0; i < productList.size(); i++) {
-                        if (productList.get(i).getId() == scanner.nextInt()) {
+                        if (productList.get(i).getId() == inputDelete) {
                             productList.remove(i);
                         }
-                        break;
+                    }
+                    for (int j = inputDelete-1; j < productList.size(); j++) {
+                        productList.get(j).setId(j+1);
                     }
                     break;
                 case 4:
