@@ -1,11 +1,14 @@
-package module2._12_Java_Collection_Framework.exercise;
+package module2._12_Java_Collection_Framework.exercise.e1;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.Scanner;
 
 public class ProductManagementLinkedlist {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        LinkedList<Product> productList = new LinkedList<Product>();
+        ArrayList<Product> productList = new ArrayList<Product>();
         Product product1 = new Product(1, "phone", 23);
         productList.add(product1);
         Product product2 = new Product(2, "cake", 20);
@@ -27,7 +30,7 @@ public class ProductManagementLinkedlist {
             choice = scanner.nextInt();
             switch (choice) {
                 case 1:
-                    int id = productList.size()+1;
+                    int id=productList.size()+1;
                     scanner.nextLine();
                     System.out.println("Nhập tên sản phẩm:");
                     String name = scanner.nextLine();
@@ -40,8 +43,9 @@ public class ProductManagementLinkedlist {
                 case 2:
                     System.out.println("Sửa thông tin sản phẩm");
                     System.out.println("Nhập id muốn sửa:");
+                    int input=scanner.nextInt();
                     for (int i = 0; i < productList.size(); i++) {
-                        if (productList.get(i).getId() == scanner.nextInt()) {
+                        if (productList.get(i).getId() == input) {
                             scanner.nextLine();
                             System.out.println("Nhập tên:");
                             productList.get(i).setName(scanner.nextLine());
@@ -54,12 +58,16 @@ public class ProductManagementLinkedlist {
                 case 3:
                     System.out.println("Xóa sản phẩm-----");
                     System.out.println("Nhập id muốn xóa:");
+                    int inputDelete=scanner.nextInt();
                     for (int i = 0; i < productList.size(); i++) {
-                        if (productList.get(i).getId() == scanner.nextInt()) {
+                        if (productList.get(i).getId() == inputDelete) {
                             productList.remove(i);
                         }
-                        break;
                     }
+                    for (int j = inputDelete-1; j < productList.size(); j++) {
+                        productList.get(j).setId(j+1);
+                    }
+                    break;
                 case 4:
                     for (int i = 0; i < productList.size(); i++) {
                         System.out.println(productList.get(i).toString());

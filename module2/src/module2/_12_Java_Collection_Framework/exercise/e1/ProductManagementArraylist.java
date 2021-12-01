@@ -1,4 +1,6 @@
-package module2._12_Java_Collection_Framework.exercise;
+package module2._12_Java_Collection_Framework.exercise.e1;
+
+import module2._12_Java_Collection_Framework.exercise.e1.Product;
 
 import java.util.ArrayList;
 import java.util.Collections;
