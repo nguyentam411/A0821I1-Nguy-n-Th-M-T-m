@@ -1,14 +1,11 @@
 package module2._12_Java_Collection_Framework.exercise.e1;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.Scanner;
+import java.util.*;
 
 public class ProductManagementLinkedlist {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        ArrayList<Product> productList = new ArrayList<Product>();
+        List<Product> productList = new LinkedList<Product>();
         Product product1 = new Product(1, "phone", 23);
         productList.add(product1);
         Product product2 = new Product(2, "cake", 20);
