@@ -23,7 +23,7 @@ public class ProductService {
         }
     }
     void delete(final int id){
-        products.removeIf(e->e.getId()== id);
+       // products.removeIf(e->e.getId()== id);
     }
     List<Product> getAll(){
         return products;
@@ -39,6 +39,6 @@ public class ProductService {
         return res;
     }
     void sort(boolean isASC){
-        products.sort(isASC? Comparator.comparing(Product::getPrice):Comparator.comparing(Product::getPrice).reversed());
+      //  products.sort(isASC? Comparator.comparing(Product::getPrice):Comparator.comparing(Product::getPrice).reversed());
     }
 }

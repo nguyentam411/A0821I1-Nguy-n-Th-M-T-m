@@ -59,7 +59,7 @@ public class Test {
     }
 
     private static void display() {
-        productService.getAll().forEach(System.out::println);
+     //   productService.getAll().forEach(System.out::println);
     }
 
     private static void edit() {
@@ -92,7 +92,7 @@ public class Test {
     private static void search(){
         System.out.printf("Input product name to search: ");
         String name= scanner.nextLine();
-      productService.search(name).forEach(System.out::println);
+     // productService.search(name).forEach(System.out::println);
     }
     private static void sort(){
         System.out.printf("Do you want sort price by ASC(0) or DESC(1): ");
