@@ -1,4 +1,4 @@
-package module2._14_thuat_toan_sap_xep;
+package module2._14_thuat_toan_sap_xep.practice.p2;
 
 public class SelectionSort {
     static double[] list = {1, 9, 4.5, 6.6, 5.7, -4.5};

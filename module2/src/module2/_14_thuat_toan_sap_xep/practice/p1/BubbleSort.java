@@ -1,4 +1,4 @@
-package module2._14_thuat_toan_sap_xep;
+package module2._14_thuat_toan_sap_xep.practice.p1;
 
 public class BubbleSort {
     static int[] list = {2, 3, 2, 5, 6, 1, -2, 3, 14, 12};
