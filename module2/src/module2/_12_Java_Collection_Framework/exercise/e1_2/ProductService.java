@@ -23,7 +23,7 @@ public class ProductService {
         }
     }
     void delete(final int id){
-        //products.removeIf(e->e.getId()== id);
+        products.removeIf(e->e.getId()== id);
     }
     List<Product> getAll(){
         return products;

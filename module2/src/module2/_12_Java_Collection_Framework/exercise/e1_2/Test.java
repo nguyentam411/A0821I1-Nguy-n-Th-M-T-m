@@ -59,7 +59,7 @@ public class Test {
     }
 
     private static void display() {
-     //   productService.getAll().forEach(System.out::println);
+        productService.getAll().forEach(System.out::println);
     }
 
     private static void edit() {
