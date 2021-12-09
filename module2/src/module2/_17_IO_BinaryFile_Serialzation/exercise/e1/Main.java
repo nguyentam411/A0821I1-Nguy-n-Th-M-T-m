@@ -5,7 +5,17 @@ import java.util.*;
 
 public class Main {
     private static Scanner scanner=new Scanner(System.in);
-    private static ProductService productService=new ProductService();
+    private static ProductService productService;
+
+    static {
+        try {
+            productService = new ProductService();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+    }
 
     public static void main(String[] args) throws IOException, ClassNotFoundException {
         int choice;
