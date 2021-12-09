@@ -9,13 +9,15 @@ public class Name {
         Scanner scanner=new Scanner(System.in);
         System.out.println("Name: ");
         String name=scanner.nextLine();
-        Pattern pattern=Pattern.compile("^[C]");
+        Pattern pattern=Pattern.compile("^((C|P|A)\\d{4}(G|H|I|K|L|M))$");
         Matcher matcher= pattern.matcher(name);
         while (!matcher.matches()){
-            System.out.println("FALSE");
+            System.out.println("Invalid name");
+            System.out.println("Name:");
             name=scanner.nextLine();
             matcher= pattern.matcher(name);
         }
+        System.out.println("Success");
 
     }
 }
