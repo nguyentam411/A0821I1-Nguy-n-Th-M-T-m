@@ -1,4 +1,4 @@
-package productexam;
+package productexam.model;
 
 public abstract class Product {
     private int id;

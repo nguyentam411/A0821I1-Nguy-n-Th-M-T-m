@@ -1,6 +1,6 @@
-package productexam;
+package productexam.model;
 
-public class HandGoods extends Product{
+public class HandGoods extends Product {
     private String country;
     private String status;
 
@@ -12,6 +12,7 @@ public class HandGoods extends Product{
         this.country = country;
         this.status = status;
     }
+
 
     public String getCountry() {
         return country;

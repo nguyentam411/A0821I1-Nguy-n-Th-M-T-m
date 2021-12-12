@@ -1,6 +1,6 @@
-package productexam;
+package productexam.model;
 
-public class ProductAuthentic extends Product{
+public class ProductAuthentic extends Product {
     private String time;
 
     public ProductAuthentic() {
@@ -9,9 +9,6 @@ public class ProductAuthentic extends Product{
     public ProductAuthentic(int id, String name, int price, String brand, String time) {
         super(id, name, price, brand);
         this.time = time;
-    }
-
-    public ProductAuthentic(String string, String string1, String string2, String string3) {
     }
 
     public String getTime() {
