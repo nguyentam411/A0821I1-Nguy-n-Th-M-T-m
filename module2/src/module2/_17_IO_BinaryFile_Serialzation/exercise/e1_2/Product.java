@@ -19,6 +19,9 @@ public class Product implements Serializable {
         this.description = description;
     }
 
+    public Product(String string, String string1) {
+    }
+
     public int getId() {
         return id;
     }
@@ -61,12 +64,13 @@ public class Product implements Serializable {
 
     @Override
     public String toString() {
-        return "Product{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", brand='" + brand + '\'' +
-                ", price=" + price +
-                ", description='" + description + '\'' +
-                '}';
+//        return "Product{" +
+//                "id=" + id +
+//                ", name='" + name + '\'' +
+//                ", brand='" + brand + '\'' +
+//                ", price=" + price +
+//                ", description='" + description + '\'' +
+//                '}';
+        return getId()+","+getName()+","+getBrand()+","+getPrice()+","+getDescription();
     }
 }

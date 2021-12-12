@@ -6,7 +6,6 @@ import java.util.List;
 
 public class ProductService {
     private static List<Product> productList = new ArrayList<Product>();
- //   private static Product productDataFromFile;
     private static List<Product> productDataFromFile;
 
     static {
@@ -33,7 +32,6 @@ public class ProductService {
 //        for (int i = 0; i < productList.size(); i++) {
 //            System.out.println(productList.get(i));
 //        }
-        productDataFromFile=readDataFromFile("src/module2/_17_IO_BinaryFile_Serialzation/exercise/e1/Product.txt");
         for (Product product : productDataFromFile) {
             System.out.println(product);
         }
