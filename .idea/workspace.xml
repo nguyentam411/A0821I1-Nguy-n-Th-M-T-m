@@ -2,22 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1fe74b52-874a-413b-ab92-4090c4e6debe" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/module2/product.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/module2/src/module2/_17_IO_BinaryFile_Serialzation/exercise/e1_2.rar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/module2/src/module2/_17_IO_BinaryFile_Serialzation/exercise/e1_2/product.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/module2/out/production/module2/module2/_16_IO_TextFile/practice/p2/result" beforeDir="false" afterPath="$PROJECT_DIR$/module2/out/production/module2/module2/_16_IO_TextFile/practice/p2/result" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/module2/out/production/module2/module2/_17_IO_BinaryFile_Serialzation/exercise/e1/Product.txt" beforeDir="false" afterPath="$PROJECT_DIR$/module2/out/production/module2/module2/_17_IO_BinaryFile_Serialzation/exercise/e1/Product.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/module2/out/production/module2/module2/_17_IO_BinaryFile_Serialzation/exercise/e1/ProductService.class" beforeDir="false" afterPath="$PROJECT_DIR$/module2/out/production/module2/module2/_17_IO_BinaryFile_Serialzation/exercise/e1/ProductService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/module2/out/production/module2/module2/_17_IO_BinaryFile_Serialzation/exercise/e1_2/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/module2/out/production/module2/module2/_17_IO_BinaryFile_Serialzation/exercise/e1_2/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/module2/out/production/module2/module2/_17_IO_BinaryFile_Serialzation/exercise/e1_2/Product.class" beforeDir="false" afterPath="$PROJECT_DIR$/module2/out/production/module2/module2/_17_IO_BinaryFile_Serialzation/exercise/e1_2/Product.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/module2/out/production/module2/module2/_17_IO_BinaryFile_Serialzation/exercise/e1_2/ProductService.class" beforeDir="false" afterPath="$PROJECT_DIR$/module2/out/production/module2/module2/_17_IO_BinaryFile_Serialzation/exercise/e1_2/ProductService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/module2/out/production/module2/module2/_19_String_Regex/practice/p3/CrawlSongExample.class" beforeDir="false" afterPath="$PROJECT_DIR$/module2/out/production/module2/module2/_19_String_Regex/practice/p3/CrawlSongExample.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/module2/src/module2/_16_IO_TextFile/practice/p2/result" beforeDir="false" afterPath="$PROJECT_DIR$/module2/src/module2/_16_IO_TextFile/practice/p2/result" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/module2/src/module2/_17_IO_BinaryFile_Serialzation/exercise/e1/Product.txt" beforeDir="false" afterPath="$PROJECT_DIR$/module2/src/module2/_17_IO_BinaryFile_Serialzation/exercise/e1/Product.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/module2/src/module2/_17_IO_BinaryFile_Serialzation/exercise/e1/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/module2/src/module2/_17_IO_BinaryFile_Serialzation/exercise/e1/ProductService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/module2/src/module2/_17_IO_BinaryFile_Serialzation/exercise/e1_2/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/module2/src/module2/_17_IO_BinaryFile_Serialzation/exercise/e1_2/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/module2/src/module2/_17_IO_BinaryFile_Serialzation/exercise/e1_2/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/module2/src/module2/_17_IO_BinaryFile_Serialzation/exercise/e1_2/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/module2/src/module2/_17_IO_BinaryFile_Serialzation/exercise/e1_2/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/module2/src/module2/_17_IO_BinaryFile_Serialzation/exercise/e1_2/ProductService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kiemtra/src/bankaccount/model/BankAccount.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kiemtra/src/bankaccount/model/PayAccount.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kiemtra/src/bankaccount/model/SaveAccount.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kiemtra/src/bankaccount/view/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exam/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/exam/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exam/exam.iml" beforeDir="false" afterPath="$PROJECT_DIR$/exam/practice.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exam/out/production/exam/module2/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exam/out/production/exam/productexam/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exam/out/production/exam/productexam/model/HandGoods.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exam/out/production/exam/productexam/model/Product.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exam/out/production/exam/productexam/model/ProductAuthentic.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exam/out/production/exam/productexam/service/HandGoodsService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exam/out/production/exam/productexam/service/ProductAuthService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exam/out/production/exam/productexam/service/ProductService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exam/src/module2/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exam/src/productexam/service/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/exam/src/productexam/service/ProductService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/module2/src/module2/_19_String_Regex/exercise/e1/Name.java" beforeDir="false" afterPath="$PROJECT_DIR$/module2/src/module2/module2/_19_String_Regex/exercise/e1/Name.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/module2/src/module2/_19_String_Regex/exercise/e2/PhoneNumber.java" beforeDir="false" afterPath="$PROJECT_DIR$/module2/src/module2/module2/_19_String_Regex/exercise/e2/PhoneNumber.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,8 +90,11 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true">
@@ -112,6 +117,7 @@
       <option name="presentableId" value="Default" />
       <updated>1639219696427</updated>
       <workItem from="1639219698195" duration="142000" />
+      <workItem from="1639999088030" duration="88000" />
     </task>
     <servers />
   </component>
