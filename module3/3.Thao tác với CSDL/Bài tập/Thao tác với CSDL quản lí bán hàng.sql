@@ -26,11 +26,16 @@ select cName,pName from customer as c
 join `order` as o on o.cID=c.cID
 join orderdetail as od on od.oID=c.cID
 join product as p on p.pID =od.pID;
-select cName from customer as c
-join `order` as o on c.cID=o.cID
-where o.cID!=c.cID;
+select cName from customer
+where not cName in ((select distinctrow cName from customer as c
+join `order` as o on c.cID=o.cID ))
 update `order`
-set oTotalPrice=orderdetail.odQTY*product.pPrice;
-from orderdetail
-join 
+z-- set oTotalPrice=(select odQTY from orderdetail limit 1 )*(select pPrice from product);
+set oTotalPrice=od.odQTY*p.pPrice
+from `order`
+join orderdetail as od
+join product as p
 select oID,oDate,oTotalPrice from `order`;
+alter table `order`
+alter column oTotalPrice
+set default oTotalPrice=orderdetail.odQTY*product.pPrice
