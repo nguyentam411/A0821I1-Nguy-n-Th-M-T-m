@@ -29,10 +29,21 @@ join product as p on p.pID =od.pID;
 select cName from customer
 where not cName in ((select distinctrow cName from customer as c
 join `order` as o on c.cID=o.cID ));
--- update  `order`
--- set oTotalPrice=orderdetail.odQTY*product.pPrice;
+update  `order`,orderdetail,product
+-- -- set oTotalPrice=orderdetail.odQTY*product.pPrice;
+set oTotalPrice=null;
+with totalPrice as(select o.oID,o.oDate, p.pID, p.pPrice,sum(od.odQTY) as total from orderdetail as od
+left join `order` as o on o.oID=od.oID
+join product as p on od.pID=p.pID
+where od.pID=p.pID
+group by od.pID)
+select totalPrice.oID,totalPrice.oDate,(totalPrice.pPrice* totalPrice.total) as oTotalPrice from totalPrice;
+-- (select pPrice from product as p
+-- join orderdetail as od on od.pID=p.pID
+-- where od.pID=p.pID);
+ 
 -- set oTotalPrice=odQTY in((select odQTY from orderdetail))* pPrice in((select pPrice from product));
--- select oID,oDate,oTotalPrice from `order` as o
+select oID,oDate,oTotalPrice from `order`;
 -- join orderdetail as od on o.oID=od.oID
 -- join product as p on od.pID=p.pID
 -- ;
