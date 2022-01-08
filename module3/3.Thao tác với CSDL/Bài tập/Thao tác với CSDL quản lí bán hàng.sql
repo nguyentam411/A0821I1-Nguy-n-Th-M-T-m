@@ -21,30 +21,24 @@ insert into orderdetail values
 (3,1,8),
 (2,5,4),
 (2,3,3);
+-- Hiển thị các thông tin  gồm oID, oDate, oPrice của tất cả các hóa đơn trong bảng Order
 select oID,oDate,oTotalPrice from `order`;
+-- Hiển thị danh sách các khách hàng đã mua hàng, và danh sách sản phẩm được mua bởi các khách
 select cName,pName from customer as c
 join `order` as o on o.cID=c.cID
 join orderdetail as od on od.oID=c.cID
 join product as p on p.pID =od.pID;
+-- Hiển thị tên những khách hàng không mua bất kỳ một sản phẩm nào
 select cName from customer
 where not cName in ((select distinctrow cName from customer as c
 join `order` as o on c.cID=o.cID ));
-update  `order`,orderdetail,product
--- -- set oTotalPrice=orderdetail.odQTY*product.pPrice;
-set oTotalPrice=null;
+-- Hiển thị mã hóa đơn, ngày bán và giá tiền của từng hóa đơn (giá một hóa đơn được tính bằng tổng giá bán của từng loại mặt hàng xuất hiện trong hóa đơn. Giá bán của từng loại được tính = odQTY*pPrice)
 with totalPrice as(select o.oID,o.oDate, p.pID, p.pPrice,sum(od.odQTY) as total from orderdetail as od
-left join `order` as o on o.oID=od.oID
+join `order` as o on o.oID=od.oID
 join product as p on od.pID=p.pID
 where od.pID=p.pID
-group by od.pID)
-select totalPrice.oID,totalPrice.oDate,(totalPrice.pPrice* totalPrice.total) as oTotalPrice from totalPrice;
--- (select pPrice from product as p
--- join orderdetail as od on od.pID=p.pID
--- where od.pID=p.pID);
- 
--- set oTotalPrice=odQTY in((select odQTY from orderdetail))* pPrice in((select pPrice from product));
-select oID,oDate,oTotalPrice from `order`;
--- join orderdetail as od on o.oID=od.oID
--- join product as p on od.pID=p.pID
--- ;
+group by od.oID,od.pID)
+select totalPrice.oID,totalPrice.oDate,sum(totalPrice.pPrice* totalPrice.total) as oTotalPrice 
+from totalPrice
+group by totalPrice.oID;
  
