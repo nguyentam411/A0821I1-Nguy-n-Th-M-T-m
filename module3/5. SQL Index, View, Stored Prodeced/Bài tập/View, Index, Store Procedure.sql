@@ -79,10 +79,9 @@ in `status` bit)
  end // 
  call updateProduct(1,'bag',1000,5,'black',1)
  DELIMITER //
- create procedure deleteProduct(IN id int)
+ create procedure deleteProduct(IN id_delete int)
  begin 
  delete from products
- where Id=id;
+ where Id=id_delete;
  end // 
- DELIMITER ;
 call deleteProduct(2);
