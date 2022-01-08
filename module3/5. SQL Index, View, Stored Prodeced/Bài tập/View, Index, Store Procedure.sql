@@ -77,7 +77,7 @@ in `status` bit)
  AND productStatus=`status`
  where Id=id_update;
  end // 
- call updateProduct(1,'bag',1000,5,'black',1)
+ call updateProduct(3,'bag',1000,5,'black',1)
  DELIMITER //
  create procedure deleteProduct(IN id_delete int)
  begin 
