@@ -30,7 +30,7 @@ join orderdetail as od on od.oID=c.cID
 join product as p on p.pID =od.pID;
 -- Hiển thị tên những khách hàng không mua bất kỳ một sản phẩm nào
 select cName from customer
-where not cName in ((select distinctrow cName from customer as c
+where not cName in ((select distinct cName from customer as c
 join `order` as o on c.cID=o.cID ));
 -- Hiển thị mã hóa đơn, ngày bán và giá tiền của từng hóa đơn (giá một hóa đơn được tính bằng tổng giá bán của từng loại mặt hàng xuất hiện trong hóa đơn. Giá bán của từng loại được tính = odQTY*pPrice)
 with totalPrice as(select o.oID,o.oDate, p.pID, p.pPrice,sum(od.odQTY) as total from orderdetail as od

@@ -76,13 +76,13 @@ in `status` bit)
  set 
  -- productCode=`code`,
  productName=`name`
- AND productPrice=`price`
- AND productAmount=`amount`
- AND productDescription=`description`
- AND productStatus=`status`
+ , productPrice=`price`
+, productAmount=`amount`
+ , productDescription=`description`
+ , productStatus=`status`
  where Id=id_update;
  end // 
- call updateProduct(3,'bag',1000,5,'black',1)
+ call updateProduct(3,'book',1000,5,'black',0)
 --  Tạo store procedure xoá sản phẩm theo id
  DELIMITER //
  create procedure deleteProduct(IN id_delete int)
