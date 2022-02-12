@@ -10,27 +10,36 @@
 <html>
 <head>
     <title>Title</title>
+    <link rel="stylesheet" href="bootstrap-4.6.1-dist/bootstrap-4.6.1-dist/css/bootstrap.css">
 </head>
 <body>
 <h1>Product List</h1>
-<table>
-    <tr >
-        <th>Id</th>
-        <th>Name</th>
-        <th>Price</th>
-        <th>Description</th>
-        <th>Producer</th>
-    </tr>
-    <c:forEach items="${productList}" var="product" varStatus="status">
+<a href="/product?action=add">Add New Product</a>
+<div class="container">
+    <table class="table table-striped">
         <tr>
-            <td>${product.id}</td>
-            <td>${product.name}</td>
-            <td>${product.price}</td>
-            <td>${product.description}</td>
-            <td>${product.producer}></td>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Description</th>
+            <th>Producer</th>
+            <th>Action</th>
         </tr>
-    </c:forEach>
+        <c:forEach items="${productList}" var="product" varStatus="status">
+            <tr>
+                <td>${product.id}</td>
+                <td>${product.name}</td>
+                <td>${product.price}</td>
+                <td>${product.description}</td>
+                <td>${product.producer}></td>
+                <td>
+                    <button class="btn btn-outline-danger" type="submit">Xóa</button>
+                </td>
 
-</table>
+            </tr>
+        </c:forEach>
+
+    </table>
+</div>
 </body>
 </html>

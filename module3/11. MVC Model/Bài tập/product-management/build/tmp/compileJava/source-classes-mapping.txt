@@ -1,12 +1,12 @@
 model/repository/ProductRepository.java
  model.repository.ProductRepository
-model/repository/ProductRepositoryImp.java
- model.repository.ProductRepositoryImp
-model/bean/Product.java
- model.bean.Product
-controller/ProductServlet.java
- controller.ProductServlet
 model/service/ProductService.java
  model.service.ProductService
+model/bean/Product.java
+ model.bean.Product
+model/repository/ProductRepositoryImp.java
+ model.repository.ProductRepositoryImp
+controller/ProductServlet.java
+ controller.ProductServlet
 model/service/impl/ProductServiceImp.java
  model.service.impl.ProductServiceImp

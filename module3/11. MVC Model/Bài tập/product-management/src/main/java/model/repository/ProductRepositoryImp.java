@@ -9,7 +9,7 @@ public class ProductRepositoryImp implements ProductRepository {
     static ArrayList<Product> productList = new ArrayList<>();
 
     static {
-        productList.add(new Product(1, "pen", 10, "blue", "aaa"));
+        productList.add(new Product(1, "pen", 10, "blue", "abc"));
         productList.add(new Product(2, "book", 15, "no", "aaa"));
         productList.add(new Product(3, "bag", 50, "green", "aaa"));
         productList.add(new Product(4, "pencil", 5, "no", "aaa"));
@@ -34,12 +34,12 @@ public class ProductRepositoryImp implements ProductRepository {
 
     @Override
     public void remove(int id) {
-
+        productList.remove(id);
     }
 
     @Override
     public Product findById(int id) {
-        return null;
+        return productList.get(id);
     }
 
     @Override

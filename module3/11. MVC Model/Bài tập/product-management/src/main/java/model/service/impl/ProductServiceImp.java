@@ -27,12 +27,12 @@ public class ProductServiceImp implements ProductService {
 
     @Override
     public void remove(int id) {
-
+        productRepository.remove(id);
     }
 
     @Override
     public Product findById(int id) {
-        return null;
+        return productRepository.findById(id);
     }
 
     @Override
