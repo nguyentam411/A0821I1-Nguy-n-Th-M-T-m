@@ -5,6 +5,7 @@
   Time: 5:45 AM
   To change this template use File | Settings | File Templates.
 --%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -40,8 +41,8 @@
             </tr>
 
             <tr>
-                <td><input type="submit" value="Delete customer"></td>
-                <td><a href="/product">Back to customer list</a></td>
+                <td><button type="submit">Delete</button></td>
+                <td><a href="/product">Back to product list</a></td>
             </tr>
         </table>
 </form>

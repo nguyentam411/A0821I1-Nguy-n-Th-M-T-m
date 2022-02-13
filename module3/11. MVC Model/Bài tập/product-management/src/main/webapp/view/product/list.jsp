@@ -33,9 +33,11 @@
                 <td>${product.description}</td>
                 <td>${product.producer}></td>
                 <td>
-                    <button class="btn btn-outline-danger" type="submit">Xóa</button>
+                    <a href="/product?action=delete">Delete</a>
                 </td>
-
+                <td>
+                    <a href="/product?action=view">View</a>
+                </td>
             </tr>
         </c:forEach>
 

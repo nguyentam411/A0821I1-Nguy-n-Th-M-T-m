@@ -31,10 +31,32 @@ public class ProductServlet extends HttpServlet {
             case "delete":
                 showFormDeleteProduct(request,response);
                 break;
+            case "view":
+                view(request,response);
             default:
                 showListProduct(request, response);
                 // hien thi danh sách
 
+        }
+    }
+
+    private void view(HttpServletRequest request, HttpServletResponse response) {
+        int id = Integer.parseInt(request.getParameter("id"));
+//        Customer customer = this.customerService.findById(id);
+        Product product=this.productService.findById(id);
+        RequestDispatcher dispatcher;
+        if(product == null){
+            dispatcher = request.getRequestDispatcher("error-404.jsp");
+        } else {
+            request.setAttribute("product", product);
+            dispatcher = request.getRequestDispatcher("view/product/view.jsp");
+        }
+        try {
+            dispatcher.forward(request,response);
+        } catch (ServletException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
 
@@ -91,6 +113,8 @@ public class ProductServlet extends HttpServlet {
             case "delete":
                 delete(request,response);
                 break;
+            case "view":
+                view(request,response);
             default:
                 showListProduct(request, response);
                 // hien thi danh sách
