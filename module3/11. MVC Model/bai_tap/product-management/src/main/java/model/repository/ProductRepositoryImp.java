@@ -2,11 +2,17 @@ package model.repository;
 
 import model.bean.Product;
 
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
 public class ProductRepositoryImp implements ProductRepository {
     static ArrayList<Product> productList = new ArrayList<>();
+    static final String SELECT_ALL_PRODUCT="select * from product_management.product;";
+
 
     static {
         productList.add(new Product(1, "pen", 10, "blue", "abc"));
@@ -18,7 +24,31 @@ public class ProductRepositoryImp implements ProductRepository {
 
     @Override
     public List<Product> findAll() {
+
+        //return productList;
+        List<Product> productList = new ArrayList<>();
+        // lấy dữ liệu từ DB => JDBC
+        Connection connection = ConnectionDB.getConnection();
+        try {
+            PreparedStatement preparedStatement = connection.prepareStatement(SELECT_ALL_PRODUCT);
+
+            ResultSet resultSet = preparedStatement.executeQuery();// dùng cho select
+            while (resultSet.next()){
+                int id = resultSet.getInt("id");
+                String name  = resultSet.getString("name");
+                float price = resultSet.getInt("price");
+                String description = resultSet.getString("description");
+                String producer = resultSet.getString("producer");
+                Product product = new Product(id,name,price,description,producer);
+                productList.add(product);
+            }
+
+
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
         return productList;
+
     }
 
     @Override

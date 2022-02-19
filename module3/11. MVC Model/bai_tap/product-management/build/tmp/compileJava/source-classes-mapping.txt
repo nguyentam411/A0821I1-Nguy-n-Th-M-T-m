@@ -1,12 +1,16 @@
 model/repository/ProductRepository.java
  model.repository.ProductRepository
-model/repository/ProductRepositoryImp.java
- model.repository.ProductRepositoryImp
+controller/FilterUTF8.java
+ controller.FilterUTF8
 model/bean/Product.java
  model.bean.Product
-model/service/impl/ProductServiceImp.java
- model.service.impl.ProductServiceImp
-model/service/ProductService.java
- model.service.ProductService
+service/impl/ProductServiceImp.java
+ service.impl.ProductServiceImp
 controller/ProductServlet.java
  controller.ProductServlet
+service/ProductService.java
+ service.ProductService
+model/repository/ProductRepositoryImp.java
+ model.repository.ProductRepositoryImp
+model/repository/ConnectionDB.java
+ model.repository.ConnectionDB
