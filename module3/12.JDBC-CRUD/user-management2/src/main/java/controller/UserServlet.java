@@ -153,7 +153,7 @@ public class UserServlet extends HttpServlet {
         User user=new User(id,name,email,country);
         boolean check= userService.save(user);
         try {
-            response.sendRedirect("/product");
+            response.sendRedirect("/user");
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -191,7 +191,7 @@ public class UserServlet extends HttpServlet {
         }else {
            userService.remove(id-1);
             try {
-                response.sendRedirect("/product");
+                response.sendRedirect("/user");
             } catch (IOException e) {
                 e.printStackTrace();
             }

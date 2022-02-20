@@ -12,6 +12,12 @@ import java.util.List;
 public class UserRepositoryImp implements UserRepository {
     static ArrayList<User> userList = new ArrayList<>();
     static final String SELECT_ALL_USER = "SELECT * FROM demo.users; ";
+    private static final String INSERT_USERS_SQL = "INSERT INTO users" + "  (name, email, country) VALUES " +
+            " (?, ?, ?);";
+
+    private static final String SELECT_USER_BY_ID = "select id,name,email,country from users where id =?";
+    private static final String DELETE_USERS_SQL = "delete from users where id = ?;";
+    private static final String UPDATE_USERS_SQL = "update users set name = ?,email= ?, country =? where id = ?;";
 
     @Override
     public List<User> findAll() {
@@ -40,34 +46,71 @@ public class UserRepositoryImp implements UserRepository {
 
     @Override
     public boolean save(User user) {
-        userList.add(user);
-        return true;
+        Connection connection = ConnectionDB.getConnection();
+        try {
+            PreparedStatement preparedStatement = connection.prepareStatement(INSERT_USERS_SQL);
+            // set param
+            preparedStatement.setString(1, user.getName());
+            preparedStatement.setString(2, user.getEmail());
+            preparedStatement.setString(3, user.getCountry());
+            int check = preparedStatement.executeUpdate(); // dùng cho add, delete,
+            if (check != 0) {
+                return true;
+            }
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+        return false;
     }
 
     @Override
     public User update(int id, User user) {
-        for (int i = 0; i < userList.size(); i++) {
-            if (userList.get(i).getId() == id) {
-                userList.get(i).setName(user.getName());
-                userList.get(i).setEmail(user.getEmail());
-                userList.get(i).setCountry(user.getCountry());
-                return userList.get(i);
-            }
-        }
+//        for (int i = 0; i < userList.size(); i++) {
+//            if (userList.get(i).getId() == id) {
+//                userList.get(i).setName(user.getName());
+//                userList.get(i).setEmail(user.getEmail());
+//                userList.get(i).setCountry(user.getCountry());
+//                return userList.get(i);
+//            }
+//        }
         return null;
     }
 
     @Override
     public void remove(int id) {
-        userList.remove(id);
+
+//        userList.remove(id);
+        Connection connection = ConnectionDB.getConnection();
+        try {
+            PreparedStatement preparedStatement = connection.prepareStatement(DELETE_USERS_SQL);
+            preparedStatement.setInt(1, id);
+            preparedStatement.executeUpdate(); // dùng cho add, delete,
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
     }
 
     @Override
     public User findById(int id) {
-        for (int i = 0; i < userList.size(); i++) {
-            if (userList.get(i).getId() == id) {
-                return userList.get(i);
-            }
+//        for (int i = 0; i < userList.size(); i++) {
+//            if (userList.get(i).getId() == id) {
+//                return userList.get(i);
+//            }
+//        }
+//        return null;
+//    }
+        Connection connection = ConnectionDB.getConnection();
+        try {
+            PreparedStatement preparedStatement = connection.prepareStatement(SELECT_USER_BY_ID);
+            preparedStatement.setInt(1, id);
+            ResultSet resultSet = preparedStatement.executeQuery();// dùng cho select
+            String name = resultSet.getString("name");
+            String email = resultSet.getString("email");
+            String country = resultSet.getString("country");
+            User user = new User(id, name, email, country);
+            return user;
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
         }
         return null;
     }
