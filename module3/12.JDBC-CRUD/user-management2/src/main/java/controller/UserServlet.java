@@ -189,7 +189,7 @@ public class UserServlet extends HttpServlet {
         if(user==null){
             dispatcher=request.getRequestDispatcher("error-404.jsp");
         }else {
-           userService.remove(id-1);
+           userService.remove(id);
             try {
                 response.sendRedirect("/user");
             } catch (IOException e) {

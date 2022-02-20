@@ -26,11 +26,11 @@ public class UserServiceImp implements UserService {
 
     @Override
     public void remove(int id) {
-        userRepository.findById(id);
+        userRepository.remove(id);
     }
 
     @Override
     public User findById(int id) {
-        return null;
+        return userRepository.findById(id);
     }
 }

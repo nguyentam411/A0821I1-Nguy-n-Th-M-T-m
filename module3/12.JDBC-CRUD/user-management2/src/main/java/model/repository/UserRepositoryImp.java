@@ -104,11 +104,12 @@ public class UserRepositoryImp implements UserRepository {
             PreparedStatement preparedStatement = connection.prepareStatement(SELECT_USER_BY_ID);
             preparedStatement.setInt(1, id);
             ResultSet resultSet = preparedStatement.executeQuery();// dùng cho select
-            String name = resultSet.getString("name");
+            while (resultSet.next()) {
+                String name = resultSet.getString("name");
             String email = resultSet.getString("email");
             String country = resultSet.getString("country");
             User user = new User(id, name, email, country);
-            return user;
+            return user;}
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }
