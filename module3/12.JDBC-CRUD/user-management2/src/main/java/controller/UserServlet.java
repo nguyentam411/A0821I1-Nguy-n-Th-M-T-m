@@ -33,10 +33,24 @@ public class UserServlet extends HttpServlet {
             case "view":
                 showView(request,response);
                 break;
+            case "find_by_country":
+                showFormByCountry(request,response);
             default:
                 showListUser(request, response);
 
         }
+    }
+
+    private void showFormByCountry(HttpServletRequest request, HttpServletResponse response) {
+        RequestDispatcher requestDispatcher=request.getRequestDispatcher("view/user/find_by_country.jsp");
+        try {
+            requestDispatcher.forward(request,response);
+        } catch (ServletException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
     }
 
     private void showListUser(HttpServletRequest request, HttpServletResponse response) {
@@ -136,10 +150,29 @@ public class UserServlet extends HttpServlet {
                 break;
             case "view":
 //                view(request,response);
+            case "find_by_country":
+                find(request,response);
             default:
                 showListUser(request, response);
                 // hien thi danh sách
 
+        }
+
+
+    }
+
+    private void find(HttpServletRequest request, HttpServletResponse response) {
+        String country=request.getParameter("country");
+        List<User> userList= userService.findByCountry(country);
+        request.setAttribute("userList", userList);
+        RequestDispatcher requestDispatcher = request.getRequestDispatcher("view/user/list.jsp");
+
+        try {
+            requestDispatcher.forward(request, response);
+        } catch (ServletException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
         }
 
 

@@ -33,4 +33,9 @@ public class UserServiceImp implements UserService {
     public User findById(int id) {
         return userRepository.findById(id);
     }
+
+    @Override
+    public List<User> findByCountry(String country) {
+        return userRepository.findByCountry(country);
+    }
 }

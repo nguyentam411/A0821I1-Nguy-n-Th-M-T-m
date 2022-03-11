@@ -13,9 +13,9 @@
     <link rel="stylesheet" href="bootstrap-4.6.1-dist/bootstrap-4.6.1-dist/css/bootstrap.css">
 </head>
 <body>
-<body>
 <h1>User List</h1>
-<a href="/user?action=add">Add New Product</a>
+<a href="/user?action=add">Add New User</a>
+<a href="/user?action=find_by_country">Find user by country</a>
 <div class="container">
     <table class="table table-striped">
         <tr>
