@@ -24,8 +24,8 @@ public class HomeServlet {
         List<Word> wordList=wordService.getWordList();
         String result = "";
         for (int i = 0; i < wordList.size(); i++) {
-           if (wordList.get(i).equals(findword)){
-               result=findword;
+           if (wordList.get(i).getWord().equals(findword)){
+               result=wordList.get(i).getNghia();
            }
         }
         model.addAttribute("result",result);

@@ -14,8 +14,7 @@
   <form action="/finding" method="post">
     <h2>Dictionary</h2>
     <input name="findword" type="text">
-    <input type="submit">
-<%--    <button type="submit">Find</button>--%>
+    <input type="submit" value="Find">
     <h2>Nghĩa là: ${result}</h2>
 
   </form>
