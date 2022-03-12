@@ -1,2 +1,0 @@
-com/codegym/controller/GreetingController.java
- com.codegym.controller.GreetingController
