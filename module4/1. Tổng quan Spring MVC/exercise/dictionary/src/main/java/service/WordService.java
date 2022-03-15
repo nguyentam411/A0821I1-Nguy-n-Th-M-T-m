@@ -10,7 +10,7 @@ public class WordService {
     static List<Word> wordList=new ArrayList<>();
     static {
         wordList.add(new Word("blue","mau xanh "));
-        wordList.add(new Word("red","mau do"));
+        wordList.add(new Word("red","mau đỏ"));
         wordList.add(new Word("black","mau den"));
     }
 
