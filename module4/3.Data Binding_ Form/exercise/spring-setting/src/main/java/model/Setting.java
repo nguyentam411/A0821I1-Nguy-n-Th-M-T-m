@@ -3,32 +3,33 @@ package model;
 import java.util.List;
 
 public class Setting {
-private List<String> languages;
-private List<Integer> pageSize;
+private int languages;
+private int pageSize;
 private boolean spamsFilter;
 private String signature;
 
-    public Setting(List<String> languages, List<Integer> pageSize, boolean spamsFilter, String signature) {
+    public Setting(int languages, int pageSize, boolean spamsFilter, String signature) {
         this.languages = languages;
         this.pageSize = pageSize;
         this.spamsFilter = spamsFilter;
         this.signature = signature;
     }
+
     public Setting(){}
 
-    public List<String> getLanguages() {
+    public int getLanguages() {
         return languages;
     }
 
-    public void setLanguages(List<String> languages) {
+    public void setLanguages(int languages) {
         this.languages = languages;
     }
 
-    public List<Integer> getPageSize() {
+    public int getPageSize() {
         return pageSize;
     }
 
-    public void setPageSize(List<Integer> pageSize) {
+    public void setPageSize(int pageSize) {
         this.pageSize = pageSize;
     }
 

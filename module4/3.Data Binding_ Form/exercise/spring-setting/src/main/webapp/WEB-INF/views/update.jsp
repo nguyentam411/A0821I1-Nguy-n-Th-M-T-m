@@ -7,25 +7,34 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
 <html>
 <head>
     <title>Title</title>
 </head>
 <body>
 <h1>Setting</h1>
-<form:form action="/setting" method="post">
-    <label>Language</label>
-    <form:select path="language" items=""/>
+<form:form action="/update" method="post">
+    <label>Language: </label>
+    <%--    <form:select path="language" items=""/>--%>
+    <select name="languageId">
+        <c:forEach items="${languageList}" var="language">
+            <option value="${language.id}">${language.name}</option>
+        </c:forEach>
+    </select>
+    <br>
     <label>Page size</label>
-    <form:select path="pageSize" items=""/>
+    <input path="pageSize" value="${setList.get(0).pageSize}">
+    <br>
     <label>Spam filter</label>
-    <form:checkbox path="spamFilter"/>
+    <input name="spamFilter" type="checkbox" value="${setList.get(0).spamsFilter}">
+    <br>
     <label>Signature</label>
-    <form:textarea path="sign"></form:textarea>
+    <input name="sign" type="text" value="${setList.get(0).signature}">
+    <br>
     <button>Update</button>
-    <button><a href="">Cancel</a></button>
-    <h1>abc</h1>
 </form:form>
-<h1>abc</h1>
+<button><a href="/home">Cancel</a></button>
 </body>
 </html>
