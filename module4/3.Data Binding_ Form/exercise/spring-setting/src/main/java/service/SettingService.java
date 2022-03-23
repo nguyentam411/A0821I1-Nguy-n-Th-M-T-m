@@ -9,8 +9,8 @@ public class SettingService {
     private static List<Setting> setList;
 
     static {
-        setList=new ArrayList<>();
-        setList.add(new Setting(1, 25, true, "abc"));
+//        setList=new ArrayList<>();
+//        setList.add(new Setting(1, 25, true, "abc"));
     }
 
     public List<Setting> getAll() {

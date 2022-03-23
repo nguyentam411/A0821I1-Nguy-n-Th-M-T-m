@@ -3,12 +3,12 @@ package model;
 import java.util.List;
 
 public class Setting {
-private int languages;
+private String languages;
 private int pageSize;
 private boolean spamsFilter;
 private String signature;
 
-    public Setting(int languages, int pageSize, boolean spamsFilter, String signature) {
+    public Setting(String languages, int pageSize, boolean spamsFilter, String signature) {
         this.languages = languages;
         this.pageSize = pageSize;
         this.spamsFilter = spamsFilter;
@@ -17,11 +17,11 @@ private String signature;
 
     public Setting(){}
 
-    public int getLanguages() {
+    public String getLanguages() {
         return languages;
     }
 
-    public void setLanguages(int languages) {
+    public void setLanguages(String languages) {
         this.languages = languages;
     }
 

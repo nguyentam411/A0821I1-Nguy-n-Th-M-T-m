@@ -13,10 +13,8 @@
 </head>
 <body>
 <h1>Home</h1>
-<form:form action="/setting" method="post">
-<button>update</button>
+<a href="/config">Setting</a>
 
-</form:form>
 
 </body>
 </html>

@@ -15,26 +15,30 @@
 </head>
 <body>
 <h1>Setting</h1>
-<form:form action="/update" method="post">
+<form:form action="/update" method="post" modelAttribute="setting">
     <label>Language: </label>
-    <%--    <form:select path="language" items=""/>--%>
-    <select name="languageId">
-        <c:forEach items="${languageList}" var="language">
-            <option value="${language.id}">${language.name}</option>
-        </c:forEach>
+    <select name="languages">
+        <option>Eng</option>
+        <option>VIN</option>
+        <option>JPA</option>
+        <option>CHI</option>
+
+<%--        <c:forEach items="${languageList}" var="language">--%>
+<%--            <option value="${language.id}">${language.name}</option>--%>
+<%--        </c:forEach>--%>
     </select>
     <br>
     <label>Page size</label>
-    <input path="pageSize" value="${setList.get(0).pageSize}">
+    <form:input path="pageSize" value="${setting.pageSize}" />
     <br>
     <label>Spam filter</label>
-    <input name="spamFilter" type="checkbox" value="${setList.get(0).spamsFilter}">
+    <form:input path="spamsFilter" type="checkbox" value="${setting.spamsFilter}"/>
     <br>
     <label>Signature</label>
-    <input name="sign" type="text" value="${setList.get(0).signature}">
+    <form:input path="signature" type="text" value="${setting.signature}" />
     <br>
     <button>Update</button>
 </form:form>
-<button><a href="/home">Cancel</a></button>
+<button><a href="/">Cancel</a></button>
 </body>
 </html>
