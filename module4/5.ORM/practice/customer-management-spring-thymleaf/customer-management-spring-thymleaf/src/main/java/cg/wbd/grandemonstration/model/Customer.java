@@ -3,16 +3,18 @@ package cg.wbd.grandemonstration.model;
 import javax.persistence.*;
 
 @Entity
+@Table
 public class Customer implements Cloneable {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
     private String name;
     private String email;
     private String address;
 
     public Customer() {
     }
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
     public Customer(String name, String email, String address) {
         this.name = name;
         this.email = email;

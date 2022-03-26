@@ -18,10 +18,10 @@
 <form:form action="/update" method="post" modelAttribute="setting">
     <label>Language: </label>
     <select name="languages">
-        <option>Eng</option>
-        <option>VIN</option>
-        <option>JPA</option>
-        <option>CHI</option>
+        <option value="Eng">Eng</option>
+        <option value="VIN">VIN</option>
+        <option value="JPA">JPA</option>
+        <option value="CHI">CHI</option>
 
 <%--        <c:forEach items="${languageList}" var="language">--%>
 <%--            <option value="${language.id}">${language.name}</option>--%>
@@ -29,13 +29,16 @@
     </select>
     <br>
     <label>Page size</label>
-    <form:input path="pageSize" value="${setting.pageSize}" />
+    <form:input path="pageSize" />
+<%--    <form:input path="pageSize" value="${setting.pageSize}" />--%>
     <br>
     <label>Spam filter</label>
-    <form:input path="spamsFilter" type="checkbox" value="${setting.spamsFilter}"/>
+<%--    <form:input path="spamsFilter" type="checkbox" value="${setting.spamsFilter}"/>--%>
+    <form:input path="spamsFilter" type="checkbox" />
     <br>
     <label>Signature</label>
-    <form:input path="signature" type="text" value="${setting.signature}" />
+    <form:input path="signature" type="text"  />
+<%--    <form:input path="signature" type="text" value="${setting.signature}" />--%>
     <br>
     <button>Update</button>
 </form:form>
