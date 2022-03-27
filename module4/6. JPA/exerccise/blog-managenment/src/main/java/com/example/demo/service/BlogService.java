@@ -8,7 +8,7 @@ import java.util.Optional;
 public interface BlogService {
     List<Blog> findAll();
 
-    Optional<Blog> findById(int id);
+    Blog getById(int id);
 
     void save(Blog blog);
 

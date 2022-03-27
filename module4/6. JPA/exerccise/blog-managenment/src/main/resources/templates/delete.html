@@ -1,10 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
 <body>
-
+<form action="delete" method="post" th:object="${blog}">
+    <label>Name Blog</label>
+    <h3 th:text="${blog.name}"></h3>
+    <br>
+    <label>Content</label>
+    <p th:text="${blog.content}"></p>
+    <button type="submit">Delete</button>
+<!--    <button type="button">Cancel</button>-->
+</form>
 </body>
 </html>

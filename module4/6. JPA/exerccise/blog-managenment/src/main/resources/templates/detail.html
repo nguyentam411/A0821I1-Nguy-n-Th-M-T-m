@@ -5,7 +5,7 @@
     <title>Title</title>
 </head>
 <body>
-<div th:object="blog">
+<div th:object="${blog}">
     <h2  th:text="${blog.name}"></h2>
     <p  th:text="${blog.content}"></p>
 </div>
