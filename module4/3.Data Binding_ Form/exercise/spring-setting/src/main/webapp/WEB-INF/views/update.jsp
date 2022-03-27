@@ -11,37 +11,39 @@
 
 <html>
 <head>
-    <title>Title</title>
+    <title>Settings</title>
 </head>
 <body>
 <h1>Setting</h1>
+
 <form:form action="/update" method="post" modelAttribute="setting">
     <label>Language: </label>
-    <select name="languages">
-        <option value="Eng">Eng</option>
-        <option value="VIN">VIN</option>
-        <option value="JPA">JPA</option>
-        <option value="CHI">CHI</option>
-
-<%--        <c:forEach items="${languageList}" var="language">--%>
-<%--            <option value="${language.id}">${language.name}</option>--%>
-<%--        </c:forEach>--%>
-    </select>
+    <form:select path="languages">
+        <form:option value="Eng">Eng</form:option>
+        <form:option value="VIN">VIN</form:option>
+        <form:option value="JPA">JPA</form:option>
+        <form:option value="CHI">CHI</form:option>
+    </form:select>
     <br>
     <label>Page size</label>
-    <form:input path="pageSize" />
-<%--    <form:input path="pageSize" value="${setting.pageSize}" />--%>
+    Show
+    <form:select path="pageSize">
+        <form:option value="5">5</form:option>
+        <form:option value="10">10</form:option>
+        <form:option value="15">15</form:option>
+        <form:option value="20">20</form:option>
+    </form:select>
+<%--    <form:input path="pageSize" />--%>
     <br>
-    <label>Spam filter</label>
-<%--    <form:input path="spamsFilter" type="checkbox" value="${setting.spamsFilter}"/>--%>
-    <form:input path="spamsFilter" type="checkbox" />
+    <label>Spams filter</label>
+    <form:checkbox path="spamsFilter" value="true"/>
+    Enable spams filter
     <br>
     <label>Signature</label>
-    <form:input path="signature" type="text"  />
-<%--    <form:input path="signature" type="text" value="${setting.signature}" />--%>
+    <form:textarea path="signature"></form:textarea>
     <br>
     <button>Update</button>
+    <button type="button">Cancel</button>
 </form:form>
-<button><a href="/">Cancel</a></button>
 </body>
 </html>
