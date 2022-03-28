@@ -5,12 +5,13 @@
     <title>Title</title>
 </head>
 <body>
-<form action="edit" method="post" th:object="${blog}">
+<form action="/edit" method="post" th:object="${blog}">
+    <input th:type="hidden" name="id" th:field="*{id}">
     <label>Name : <input th:field="*{name}" th:text="${name}"></label>
     <br>
     <label>Content: <input th:field="*{content}" th:text="${content}"></label>
     <br>
-    <input type="submit" value="Create">
+    <input type="submit" value="Update">
 </form>
 </body>
 </html>

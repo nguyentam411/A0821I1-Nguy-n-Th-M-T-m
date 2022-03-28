@@ -5,14 +5,16 @@
     <title>Title</title>
 </head>
 <body>
-<form action="delete" method="post" th:object="${blog}">
+<form action="/delete" method="post" th:object="${blog}">
+    <input th:type="hidden" name="id" th:field="*{id}">
     <label>Name Blog</label>
     <h3 th:text="${blog.name}"></h3>
     <br>
     <label>Content</label>
     <p th:text="${blog.content}"></p>
     <button type="submit">Delete</button>
-<!--    <button type="button">Cancel</button>-->
+    <button><a href="/">Cancel</a>
+    </button>
 </form>
 </body>
 </html>

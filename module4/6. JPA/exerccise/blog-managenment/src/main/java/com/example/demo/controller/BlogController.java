@@ -40,19 +40,21 @@ public class BlogController {
         return new ModelAndView("delete", "blog", blogService.getById(id));
     }
 
-    @PostMapping("delete")
-    public String deleteBlog(@RequestParam Blog blog) {
+    @PostMapping("/delete")
+    public String deleteBlog(Blog blog) {
         blogService.remove(blog.getId());
         return "redirect:/";
     }
+
     @GetMapping("edit/{id}")
-    public  ModelAndView getEditPage(@PathVariable int id){
-        return new ModelAndView("edit","blog",blogService.getById(id));
+    public ModelAndView getEditPage(@PathVariable int id) {
+        return new ModelAndView("edit", "blog", blogService.getById(id));
     }
-//    @PostMapping("edit")
-//    public String updateBlog(@ModelAttribute Blog blog) {
-//            blogService.;
-//        return "redirect:/";
-//    }
+
+    @PostMapping("/edit")
+    public String updateBlog(@ModelAttribute Blog blog) {
+        blogService.save(blog);
+        return "redirect:/";
+    }
 
 }

@@ -6,7 +6,7 @@
 </head>
 <body>
 <h2>Create Blog</h2>
-<form action="create" th:object="${blog}" method="post">
+<form action="/create" th:object="${blog}" method="post">
     <label>Name : <input th:field="*{name}"></label>
     <br>
     <label>Content: <input th:field="*{content}"></label>

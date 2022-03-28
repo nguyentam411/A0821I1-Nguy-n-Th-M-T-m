@@ -5,6 +5,8 @@ import com.example.demo.repository.BlogRepossitory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
 import java.util.List;
 import java.util.Optional;
 
@@ -13,6 +15,9 @@ public class BlogServiceImpl implements BlogService {
 
     @Autowired
     BlogRepossitory blogRepossitory;
+
+    @PersistenceContext
+    private EntityManager em;
 
     @Override
     public List<Blog> findAll() {
@@ -26,6 +31,11 @@ public class BlogServiceImpl implements BlogService {
 
     @Override
     public void save(Blog blog) {
+//        if (blog.getId() != null) {
+//            em.merge(blog);
+//        } else {
+//            em.persist(blog);
+//        }
         blogRepossitory.save(blog);
     }
 
