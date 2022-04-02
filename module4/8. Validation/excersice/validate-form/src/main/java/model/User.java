@@ -1,23 +1,34 @@
 package model;
 
+import org.springframework.validation.Errors;
+import org.springframework.validation.ValidationUtils;
+import org.springframework.validation.Validator;
+import vallidation.PhoneNumber;
+
 import javax.validation.constraints.Min;
+import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 
-public class User {
+
+public class User  {
 
     @Size(min = 5, max = 45)
     private String firstName;
     @Size(min = 5, max = 45)
     private String lastName;
-    private int phoneNumber;
+    @PhoneNumber
+    private String phoneNumber;
     @Min(18)
     private int age;
+    @Pattern(regexp = "/^\\w+([\\.-]?\\w+)*@\\w+([\\.-]?\\w+)*(\\.\\w{2,3})+$/",message = "Email invalid")
     private String email;
 
     public User() {
     }
 
-    public User(@Size(min = 5, max = 45) String firstName, @Size(min = 5, max = 45) String lastName, int phoneNumber, @Min(18) int age, String email) {
+    public User(@Size(min = 5, max = 45) String firstName, @Size(min = 5, max = 45) String lastName, String phoneNumber,
+                @Min(18) int age,
+                @Pattern(regexp = "/^\\w+([\\.-]?\\w+)*@\\w+([\\.-]?\\w+)*(\\.\\w{2,3})+$/") String email) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.phoneNumber = phoneNumber;
@@ -57,11 +68,12 @@ public class User {
         this.email = email;
     }
 
-    public int getPhoneNumber() {
+    public String getPhoneNumber() {
         return phoneNumber;
     }
 
-    public void setPhoneNumber(int phoneNumber) {
+    public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
     }
+
 }
