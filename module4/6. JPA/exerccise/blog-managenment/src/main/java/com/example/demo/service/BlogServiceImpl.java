@@ -31,12 +31,7 @@ public class BlogServiceImpl implements BlogService {
 
     @Override
     public void save(Blog blog) {
-//        if (blog.getId() != null) {
-//            em.merge(blog);
-//        } else {
-//            em.persist(blog);
-//        }
-        blogRepossitory.save(blog);
+            blogRepossitory.save(blog);
     }
 
     @Override

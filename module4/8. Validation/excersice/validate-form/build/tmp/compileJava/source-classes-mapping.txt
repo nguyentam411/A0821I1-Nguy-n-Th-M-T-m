@@ -1,0 +1,12 @@
+configuration/AppInitializer.java
+ configuration.AppInitializer
+configuration/AppConfiguration.java
+ configuration.AppConfiguration
+service/UserServiceImpl.java
+ service.UserServiceImpl
+service/UserService.java
+ service.UserService
+model/User.java
+ model.User
+controller/FormController.java
+ controller.FormController

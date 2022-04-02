@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="4441d8a4-8e18-43d8-baf2-e6c9e5c3ce59" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../../3.Data Binding_ Form/exercise/form-y-te/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../3.Data Binding_ Form/exercise/form-y-te/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../3.Data Binding_ Form/exercise/form-y-te/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../3.Data Binding_ Form/exercise/form-y-te/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../3.Data Binding_ Form/exercise/form-y-te/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../3.Data Binding_ Form/exercise/form-y-te/.idea/modules/form-y-te.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../3.Data Binding_ Form/exercise/form-y-te/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../3.Data Binding_ Form/exercise/form-y-te/src/main/webapp/WEB-INF/applicationContext.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../3.Data Binding_ Form/exercise/form-y-te/src/main/webapp/WEB-INF/dispatcher-servlet.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../3.Data Binding_ Form/exercise/form-y-te/src/main/webapp/WEB-INF/views/form.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../3.Data Binding_ Form/exercise/form-y-te/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product-management-thymeleaf-2/.idea/modules/product-management-thymeleaf-2.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product-management-thymeleaf-2/src/main/java/configuration/AppConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product-management-thymeleaf-2/src/main/java/configuration/AppInitializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product-management-thymeleaf-2/src/main/java/controller/ProductController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product-management-thymeleaf-2/src/main/java/model/Product.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product-management-thymeleaf-2/src/main/java/service/IProductService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product-management-thymeleaf-2/src/main/java/service/ProductService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product-management-thymeleaf-2/src/main/webapp/WEB-INF/views/create.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product-management-thymeleaf-2/src/main/webapp/WEB-INF/views/delete.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product-management-thymeleaf-2/src/main/webapp/WEB-INF/views/edit.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product-management-thymeleaf-2/src/main/webapp/WEB-INF/views/list.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product_management_thymeleaf/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product_management_thymeleaf/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product_management_thymeleaf/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product_management_thymeleaf/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product_management_thymeleaf/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product_management_thymeleaf/.idea/modules/product_management_thymeleaf.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product_management_thymeleaf/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product_management_thymeleaf/src/main/java/configuration/AppConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product_management_thymeleaf/src/main/java/configuration/AppInitializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product_management_thymeleaf/src/main/java/controller/ProductController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product_management_thymeleaf/src/main/java/model/Product.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product_management_thymeleaf/src/main/java/service/IProductService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product_management_thymeleaf/src/main/java/service/ProductService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product_management_thymeleaf/src/main/webapp/WEB-INF/views/create.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product_management_thymeleaf/src/main/webapp/WEB-INF/views/delete.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product_management_thymeleaf/src/main/webapp/WEB-INF/views/edit.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product_management_thymeleaf/src/main/webapp/WEB-INF/views/find.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product_management_thymeleaf/src/main/webapp/WEB-INF/views/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product_management_thymeleaf/src/main/webapp/WEB-INF/views/layout.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product_management_thymeleaf/src/main/webapp/WEB-INF/views/view.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-management-thymeleaf/.gradle/6.7/executionHistory/executionHistory.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-management-thymeleaf/.gradle/6.7/executionHistory/executionHistory.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-management-thymeleaf/.gradle/6.7/fileChanges/last-build.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-management-thymeleaf/.gradle/6.7/fileHashes/fileHashes.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-management-thymeleaf/.gradle/6.7/fileHashes/fileHashes.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-management-thymeleaf/.gradle/6.7/gc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-management-thymeleaf/.gradle/6.7/javaCompile/classAnalysis.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-management-thymeleaf/.gradle/6.7/javaCompile/javaCompile.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-management-thymeleaf/.gradle/6.7/javaCompile/taskHistory.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-management-thymeleaf/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-management-thymeleaf/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-management-thymeleaf/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-management-thymeleaf/.gradle/checksums/checksums.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-management-thymeleaf/.gradle/configuration-cache/gc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-management-thymeleaf/.gradle/vcs-1/gc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-management-thymeleaf/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-management-thymeleaf/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-management-thymeleaf/.idea/gradle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-management-thymeleaf/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-management-thymeleaf/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-management-thymeleaf/.idea/modules/product-management-thymeleaf.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-management-thymeleaf/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-management-thymeleaf/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-management-thymeleaf/build/classes/java/main/configuration/AppConfiguration.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-management-thymeleaf/build/classes/java/main/configuration/AppInitializer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-management-thymeleaf/build/classes/java/main/controller/ProductController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-management-thymeleaf/build/classes/java/main/model/Product.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-management-thymeleaf/build/classes/java/main/service/IProductService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-management-thymeleaf/build/classes/java/main/service/ProductService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-management-thymeleaf/build/libs/product-management-thymeleaf-1.0-SNAPSHOT.war" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-management-thymeleaf/build/tmp/compileJava/source-classes-mapping.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-management-thymeleaf/build/tmp/war/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-management-thymeleaf/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-management-thymeleaf/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-management-thymeleaf/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-management-thymeleaf/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-management-thymeleaf/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-management-thymeleaf/src/main/java/configuration/AppConfiguration.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-management-thymeleaf/src/main/java/configuration/AppInitializer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-management-thymeleaf/src/main/java/controller/ProductController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-management-thymeleaf/src/main/java/model/Product.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-management-thymeleaf/src/main/java/service/IProductService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-management-thymeleaf/src/main/java/service/ProductService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-management-thymeleaf/src/main/webapp/WEB-INF/views/create.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-management-thymeleaf/src/main/webapp/WEB-INF/views/delete.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-management-thymeleaf/src/main/webapp/WEB-INF/views/edit.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-management-thymeleaf/src/main/webapp/WEB-INF/views/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-management-thymeleaf/src/main/webapp/WEB-INF/views/layout.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-management-thymeleaf/src/main/webapp/WEB-INF/views/view.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../practice/customer-management-thymeleaf/.gradle/6.7/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../practice/customer-management-thymeleaf/.gradle/6.7/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../practice/customer-management-thymeleaf/.gradle/6.7/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../practice/customer-management-thymeleaf/.gradle/6.7/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../practice/customer-management-thymeleaf/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../practice/customer-management-thymeleaf/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../6. JPA/exerccise/blog-managenment/src/main/java/com/example/demo/controller/BlogController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../6. JPA/exerccise/blog-managenment/src/main/java/com/example/demo/controller/BlogController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../6. JPA/exerccise/blog-managenment/src/main/java/com/example/demo/service/BlogServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../6. JPA/exerccise/blog-managenment/src/main/java/com/example/demo/service/BlogServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../6. JPA/exerccise/blog-managenment/src/main/resources/templates/create.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../6. JPA/exerccise/blog-managenment/src/main/resources/templates/create.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../6. JPA/exerccise/blog-managenment/src/main/resources/templates/delete.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../6. JPA/exerccise/blog-managenment/src/main/resources/templates/delete.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../6. JPA/exerccise/blog-managenment/src/main/resources/templates/detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../6. JPA/exerccise/blog-managenment/src/main/resources/templates/detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../6. JPA/exerccise/blog-managenment/src/main/resources/templates/edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../6. JPA/exerccise/blog-managenment/src/main/resources/templates/edit.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../6. JPA/exerccise/blog-managenment/src/main/resources/templates/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../6. JPA/exerccise/blog-managenment/src/main/resources/templates/list.html" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Jsp File" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="ProjectId" id="270xJFiNAOVC5oPPeJBjPmnac1x" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/product-management-thymeleaf" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\codegym\code\module4\4.Views_Thymeleaf\exercise\src\main\java" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="model" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="4441d8a4-8e18-43d8-baf2-e6c9e5c3ce59" name="Default Changelist" comment="" />
+      <created>1648470733091</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1648470733091</updated>
+      <workItem from="1648470734609" duration="494000" />
+      <workItem from="1648471264536" duration="230000" />
+      <workItem from="1648643163466" duration="41000" />
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+</project>
