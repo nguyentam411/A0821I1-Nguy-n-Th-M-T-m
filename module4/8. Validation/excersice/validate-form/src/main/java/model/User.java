@@ -5,6 +5,7 @@ import org.springframework.validation.ValidationUtils;
 import org.springframework.validation.Validator;
 import vallidation.PhoneNumber;
 
+import javax.validation.constraints.Email;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
@@ -20,15 +21,14 @@ public class User  {
     private String phoneNumber;
     @Min(18)
     private int age;
-    @Pattern(regexp = "/^\\w+([\\.-]?\\w+)*@\\w+([\\.-]?\\w+)*(\\.\\w{2,3})+$/",message = "Email invalid")
+    @Email
     private String email;
 
     public User() {
     }
 
-    public User(@Size(min = 5, max = 45) String firstName, @Size(min = 5, max = 45) String lastName, String phoneNumber,
-                @Min(18) int age,
-                @Pattern(regexp = "/^\\w+([\\.-]?\\w+)*@\\w+([\\.-]?\\w+)*(\\.\\w{2,3})+$/") String email) {
+    public User(@Size(min = 5, max = 45) String firstName, @Size(min = 5, max = 45) String lastName,
+                String phoneNumber, @Min(18) int age, @Email String email) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.phoneNumber = phoneNumber;

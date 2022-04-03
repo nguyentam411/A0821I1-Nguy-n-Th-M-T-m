@@ -13,7 +13,8 @@ public class PhoneNumberValidator implements ConstraintValidator<PhoneNumber, St
 
     @Override
     public boolean isValid(String value, ConstraintValidatorContext context) {
-        return (value.length()>11 || value.length()<10);
+        return (value.length()>=10 && value.length()<=11);
+//        return (value.length()>11 || value.length()<10);
 //                &&(!number.startsWith("0"))&&(!number.matches("(^$|[0-9]*$)"));
     }
 }
