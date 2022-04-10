@@ -8,14 +8,17 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import com.example.productmanagement.repository.ProductRepository;
 
+import java.util.List;
+
 @Service
 public class ProductServiceImpl implements ProductService {
     @Autowired
     ProductRepository productRepository;
 
+
     @Override
-    public Page<Product> getAll(Pageable pageable) {
-        return productRepository.findAll(pageable);
+    public List<Product> findAll() {
+        return productRepository.findAll();
     }
 
     @Override
