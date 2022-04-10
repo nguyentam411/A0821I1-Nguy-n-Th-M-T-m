@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
+import java.time.LocalDateTime;
 import java.util.Optional;
 
 @Controller
@@ -30,6 +31,7 @@ public class BlogController {
     @GetMapping("create")
     public ModelAndView getCreatePage(Model model) {
         model.addAttribute("categories", categoryService.findAll());
+//        model.addAttribute("times", LocalDateTime.now());
         return new ModelAndView("create", "blog", new Blog());
     }
 

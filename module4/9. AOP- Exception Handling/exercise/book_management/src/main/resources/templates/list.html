@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Book Management</title>
+</head>
+<body>
+<h2>Blog List</h2>
+<!--<a href="/borrow">Borrow book</a>-->
+<h2 th:text="${message}"></h2>
+<table border="1">
+    <tr>
+        <td>Name</td>
+        <td>Amount</td>
+        <td>Action</td>
+    </tr>
+    <tr th:each="book: ${books}">
+        <td th:text="${book.name}"></td>
+        <td th:text="${book.amount}"></td>
+        <td>
+            <a th:href="@{'detail/'+ ${book.id}}">Detail |</a>
+            <a th:href="@{'borrow/'+ ${book.id}}">Borrow</a>
+        </td>
+    </tr>
+
+</table>
+
+</body>
+</html>

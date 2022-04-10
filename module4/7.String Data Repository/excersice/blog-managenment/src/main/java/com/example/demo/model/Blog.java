@@ -1,6 +1,9 @@
 package com.example.demo.model;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 import javax.persistence.*;
+import java.time.LocalDateTime;
 
 @Entity
 public class Blog {
@@ -45,7 +48,6 @@ public class Blog {
     public void setContent(String content) {
         this.content = content;
     }
-
     public Category getCategory() {
         return category;
     }
