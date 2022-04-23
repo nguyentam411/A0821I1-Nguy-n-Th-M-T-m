@@ -3,40 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" href="bootstrap-4.6.1-dist/bootstrap-4.6.1-dist/css/bootstrap.css">
 </head>
 <body>
-<form action="/delete" method="post" th:object="${blog}">
-    <input th:type="hidden" name="id" th:field="*{id}">
-    <table>
-        <tr>
-            <td>Name Blog: </td>
-            <td>
-                <h3 th:text="${blog.name}"></h3>
-            </td>
-        </tr>
-        <tr>
-            <td>Content: </td>
-            <td>
-                <p th:text="${blog.content}"></p>
-            </td>
-        </tr>
-        <tr>
-            <td>Category</td>
-            <td>
-               <p th:text="${blog.category.name}"></p>
-            </td>
-        </tr>
+<div class="modal">
 
-        <tr>
-            <td>
-                <button type="submit">Delete</button>
-            </td>
-            <td>
-                <button><a href="/">Cancel</a></button>
+    <form action="/delete" method="post" th:object="${blog}">
+        <input th:type="hidden" name="id" th:field="*{id}">
+        <table class="modal-content">
+            <tr class="modal-header">
+                <td>Name Blog:</td>
+                <td>
+                    <h3 th:text="${blog.name}"></h3>
+                </td>
+            </tr>
+            <tr>
+                <td>Content:</td>
+                <td>
+                    <p th:text="${blog.content}"></p>
+                </td>
+            </tr>
+            <tr>
+                <td>Category</td>
+                <td>
+                    <p th:text="${blog.category.name}"></p>
+                </td>
+            </tr>
 
-            </td>
-        </tr>
-    </table>
-</form>
+            <tr class="modal-footer">
+                <td>
+                    <button type="submit">Delete</button>
+                </td>
+                <td>
+                    <button><a href="/">Cancel</a></button>
+
+                </td>
+            </tr>
+        </table>
+
+    </form>
+</div>
+
 </body>
 </html>
