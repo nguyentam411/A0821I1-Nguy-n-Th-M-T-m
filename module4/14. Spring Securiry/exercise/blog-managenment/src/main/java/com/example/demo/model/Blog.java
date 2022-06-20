@@ -14,8 +14,6 @@ public class Blog {
     private String content;
     @ManyToOne(targetEntity = Category.class)
     private Category category;
-    @Column(nullable = false)
-    private String email;
 
     public Blog() {
     }

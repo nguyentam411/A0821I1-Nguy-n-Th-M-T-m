@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+<!--    <link rel="stylesheet" href="bootstrap-4.6.1-dist/bootstrap-4.6.1-dist/css/bootstrap.css">-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+          integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+
+</head>
+<body>
+<h2>Tạo mới câu hỏi</h2>
+<form action="/create" th:object="${questionContent}" method="post">
+    <div class="container">
+        <table class="table table-striped">
+            <tr>
+                <td>Tiêu đề</td>
+            </tr>
+            <tr>
+                <td><input class="container" th:field="*{title}"></td>
+                <td th:if="${#fields.hasErrors('title')}" th:errors="*{title}">Name Error</td>
+            </tr>
+            <tr><td>Nội dung</td></tr>
+            <tr>
+                <td><input class="container" th:field="*{content}"></td>
+                <td th:if="${#fields.hasErrors('content')}" th:errors="*{content}">Price Error</td>
+
+            </tr>
+            <tr><td>Loại câu hỏi</td></tr>
+            <tr>
+                <td class="container">
+                <select th:field="*{questionType}">
+                    <option th:each="questionType: ${questionTypes}" th:value="${questionType.id}"
+                            th:text="${questionType.name}"></option>
+                </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Status:
+                    <input th:field="*{status}" type="radio" value="Chờ phản hồi">Chờ phản hồi
+                    <input th:field="*{status}" type="radio" value="Đã phản hồi">Đã phản hồi
+
+                </td>
+            </tr>
+
+            <tr>
+                <td><input type="submit" value="Tạo câu hỏi"></td>
+                <td>
+                    <button><a href="/">Hủy</a></button>
+                </td>
+            </tr>
+        </table>
+    </div>
+</form>
+
+</body>
+</html>

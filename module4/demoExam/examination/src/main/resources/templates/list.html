@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <!--    <link rel="stylesheet" href="bootstrap-4.6.1-dist/bootstrap-4.6.1-dist/css/bootstrap.css">-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+          integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div>
+
+
+    <div class="container">
+        <h2><a href="/">Danh sách câu hỏi</a></h2>
+
+        <div class="col-lg-6 table-title">
+            <a href="/create" class="btn btn-success add" data-bs-toggle="modal"><i class="material-icons">&#xE147;</i>
+                <span>Add New</span></a>
+        </div>
+
+        <form method="get" th:action="@{/search}">
+            <div class="form-row align-items-center">
+                <div class="col-auto my-1">
+                    <select name="search_by" class="custom-select">
+                        <option th:value="title">Tiêu đề</option>
+                        <option th:value="questionType">Loại câu hỏi</option>
+                    </select>
+
+                </div>
+                <div class="col-auto my-1">
+                    <input type="text" name="search_key" th:value="${search_key}" class="form-control">
+
+                </div>
+                <div class="col-auto my-1">
+                    <button type="submit" class="btn btn-primary">Search</button>
+
+                </div>
+            </div>
+        </form>
+        <h2 th:text="${message}"></h2>
+
+        <table class="table table-striped">
+            <tr>
+                <td>STT</td>
+                <td>Tiêu đề</td>
+                <td>Loại câu hỏi</td>
+                <td>Ngày đăng</td>
+                <td>Tình trạng</td>
+                <td>Tính năng</td>
+            </tr>
+            <tr th:each="questionContent,status: ${questionContents}">
+                <td th:text="${status.count + questionContents.getNumber() * questionContents.getSize()}"></td>
+                <td th:text="${questionContent.title}"></td>
+                <td th:text="${questionContent.questionType.name}"></td>
+                <td th:text="${#dates.format(questionContent.date_create, 'dd-MM-yyyy')}"></td>
+                <td th:text="${questionContent.status}"></td>
+                <td>
+                    <a th:href="@{'delete/'+ ${questionContent.id}}">Delete |</a>
+                    <a th:href="@{'edit/'+ ${questionContent.id}}">Edit |</a>
+                    <a th:href="@{'detail/'+ ${questionContent.id}}">Detail</a>
+                </td>
+            </tr>
+            <tr>
+                <div class="d-flex justify-content-between">
+                    <div class="pt-2">Showing [[${questionContents.getNumberOfElements()}]] out of
+                        [[${questionContents.getTotalElements()}]]
+                    </div>
+                    <div>
+                        <nav>
+                            <ul class="pagination">
+                                <li class="page-item" th:classappend="(${!questionContents.hasPrevious()} ? 'disabled')">
+                                    <a class="page-link"
+                                       th:href="@{''(page=${questionContents.getNumber()},search_by=${search_by},search_key= ${search_key})}">Previous</a>
+                                </li>
+                                <li class="page-item" th:each="i : ${#numbers.sequence(1, questionContents.getTotalPages())}"
+                                    th:classappend="${i == questionContents.getNumber() + 1} ? 'active' : ''">
+                                    <a class="page-link"
+                                       th:href="@{''(page=${i},search_by=${search_by},search_key= ${search_key})}">[[${i}]]</a>
+
+                                </li>
+                                <li class="page-item" th:classappend="(${!questionContents.hasNext()} ? 'disabled')">
+                                    <a class="page-link"
+                                       th:href="@{''(page=${questionContents.getNumber + 2},search_by=${search_by},search_key= ${search_key})}">Next</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </tr>
+        </table>
+    </div>
+
+</div>
+</div>
+</div>
+</body>
+</html>

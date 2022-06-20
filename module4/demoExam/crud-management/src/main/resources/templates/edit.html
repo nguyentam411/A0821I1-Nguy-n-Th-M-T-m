@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit Blog</title>
+</head>
+<body>
+<form action="/edit" method="post" th:object="${giaoDich}">
+    <input th:type="hidden" name="id" th:field="*{id}">
+    <table>
+        <tr>
+            <td>Mã GD</td>
+            <td><input th:field="*{ma_giao_dich}"></td>
+        </tr>
+        <tr>
+            <td>Tên khách hàng</td>
+            <td class="container">
+                <select th:field="*{khachHang}">
+                    <option th:each="khachHang: ${khachHangs}" th:value="${khachHang.id}"
+                            th:text="${khachHang.name}"></option>
+                </select>
+        </tr>
+        <tr>
+            <td>Ngày GD</td>
+            <td><input th:field="*{date}" type="date"></td>
+        </tr>
+        <tr>
+            <td>Loại dịch vụ</td>
+            <td>
+                <input th:field="*{category}" type="radio" value="Đất">Đất
+                <input th:field="*{category}" type="radio" value="Nhà và đất">Nhà và đất
+            </td>
+        </tr>
+        <tr>
+            <td>Gía</td>
+            <td><input th:field="*{gia}"></td>
+        </tr>
+        <tr>
+            <td>Diện tích</td>
+            <td><input th:field="*{dien_tich}"></td>
+        </tr>
+        <tr>
+            <td><input type="submit" value="Update">
+            </td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>

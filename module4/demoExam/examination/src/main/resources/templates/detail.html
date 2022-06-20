@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Detail Blog</title>
+</head>
+<body>
+<div th:object="${questionContent}">
+    <table>
+        <tr>
+            <td>Tiêu đề: </td>
+            <td>
+                <h2 th:text="${questionContent.title}"></h2>
+            </td>
+        </tr>
+        <tr>
+            <td>Nội dung: </td>
+            <td>
+                <p th:text="${questionContent.content}"></p>
+            </td>
+        </tr>
+        <tr>
+            <td>Phản hồi: </td>
+            <td>
+                <p th:text="${questionContent.answer}"></p>
+            </td>
+        </tr>
+        <tr>
+            <td>Loại câu hỏi: </td>
+            <td>
+                <p th:text="${questionContent.questionType.name}"></p>
+            </td>
+        </tr>
+        <tr>
+            <td>Ngày đăng: </td>
+            <td>
+                <p th:text="${questionContent.date_create}"></p>
+            </td>
+        </tr>
+        <tr>
+            <td>Tình trạng: </td>
+            <td>
+                <p th:text="${questionContent.status}"></p>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <button><a href="/">Đóng</a></button>
+            </td>
+        </tr>
+    </table>
+</div>
+</body>
+</html>

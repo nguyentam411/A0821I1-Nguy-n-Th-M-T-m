@@ -7,15 +7,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.web.PageableDefault;
-import org.springframework.security.core.context.SecurityContext;
-import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-import java.security.Principal;
 import java.time.LocalDateTime;
 import java.util.Optional;
 
@@ -29,20 +26,6 @@ public class BlogController {
     @GetMapping("")
     public ModelAndView getListBlog(@PageableDefault(size = 5) Pageable pageable) {
         return new ModelAndView("list", "blogs", blogService.getAll(pageable));
-    }
-    @GetMapping("/user")
-    public ModelAndView user(Principal principal) {
-        // Get authenticated user name from Principal
-        System.out.println(principal.getName());
-        return new ModelAndView("/user");
-    }
-
-    @GetMapping("/admin")
-    public ModelAndView admin() {
-        // Get authenticated user name from SecurityContext
-        SecurityContext context = SecurityContextHolder.getContext();
-        System.out.println(context.getAuthentication().getName());
-        return new ModelAndView("/admin");
     }
 
     @GetMapping("create")

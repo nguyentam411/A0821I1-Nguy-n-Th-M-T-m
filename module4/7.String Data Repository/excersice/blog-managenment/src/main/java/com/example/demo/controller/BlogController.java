@@ -5,7 +5,9 @@ import com.example.demo.service.BlogService;
 import com.example.demo.service.CategoryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 import org.springframework.data.web.PageableDefault;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -25,7 +27,9 @@ public class BlogController {
 
     @GetMapping("")
     public ModelAndView getListBlog(@PageableDefault(size = 5) Pageable pageable) {
-        return new ModelAndView("list", "blogs", blogService.getAll(pageable));
+        return new ModelAndView("list", "blogs",
+                blogService.getAll(pageable)
+        );
     }
 
     @GetMapping("create")

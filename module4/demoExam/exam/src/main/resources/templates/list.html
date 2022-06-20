@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+          integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+
+</head>
+<body>
+<h2>List</h2>
+<a href="/create">Add</a>
+<form method="get" th:action="@{/search}">
+    <input type="text" name="search_key" th:value="${search_key}">
+    <button type="submit">Search</button>
+</form>
+
+<h2 th:text="${message}"></h2>
+<div class="container">
+    <table class="table table-striped">
+        <tr>
+            <td>Mã giao dịch</td>
+            <td>Tên khách hàng</td>
+            <td>Ngày giao dịch</td>
+            <td>Loại dịch vụ</td>
+            <td>Đơn giá(VND/m2)</td>
+            <td>Diện tích(m2)</td>
+            <td>Action</td>
+        </tr>
+        <tr th:each="giao_dich: ${giao_dichs}">
+            <td th:text="${giao_dich.ma_giao_dich}"></td>
+            <td>
+                <p th:text="${giao_dich.khach_hang.name}"></p>
+            </td>
+            <td th:text="${#dates.format(giao_dich.date, 'dd-MM-yyyy')}"></td>
+            <td th:text="${giao_dich.loai_dich_vu.name}"></td>
+            <td th:text="${giao_dich.gia}"></td>
+            <td th:text="${giao_dich.dien_tich}"></td>
+
+            <td>
+                <a th:href="@{'detail/'+ ${giao_dich.id}}">Detail |</a>
+                <a th:href="@{'delete/'+ ${giao_dich.id}}">Delete |</a>
+            </td>
+        </tr>
+    </table>
+</div>
+<div>
+    <a th:href="@{'search'(page=${giao_dichs.number - 1}, search_key = ${search_key})}" th:if="${giao_dichs.hasPrevious()}">Previous</a>
+    <span th:text="${giao_dichs.number + 1}"></span>/<span th:text="${giao_dichs.totalPages}"></span>
+    <a th:href="@{'search'(page=${giao_dichs.number + 1}, search_key = ${search_key})}"
+       th:if="${giao_dichs.hasNext()}">Next</a>
+</div>
+
+</div>
+
+</body>
+</html>

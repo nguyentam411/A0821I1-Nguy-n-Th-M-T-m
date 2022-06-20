@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+<!--    <link rel="stylesheet" href="bootstrap-4.6.1-dist/bootstrap-4.6.1-dist/css/bootstrap.css">-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+          integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+
+</head>
+<body>
+<h2>Create Form</h2>
+<form action="/create" th:object="${product}" method="post">
+    <div class="container">
+        <table class="table table-striped">
+            <tr>
+                <td>Name</td>
+            </tr>
+            <tr>
+                <td><input class="container" th:field="*{name}"></td>
+                <td th:if="${#fields.hasErrors('name')}" th:errors="*{name}">Name Error</td>
+            </tr>
+            <tr><td>Price</td></tr>
+            <tr>
+                <td><input class="container" th:field="*{price}"></td>
+                <td th:if="${#fields.hasErrors('price')}" th:errors="*{price}">Price Error</td>
+
+            </tr>
+            <tr><td>Date</td></tr>
+            <tr>
+                <td><input class="container" th:field="*{date}" type="date"></td>
+                <td th:if="${#fields.hasErrors('date')}" th:errors="*{date}" > Date Error</td>
+
+            </tr>
+            <tr><td>Category</td></tr>
+            <tr>
+                <td class="container">
+                <select th:field="*{category}">
+                    <option th:each="category: ${categories}" th:value="${category.id}"
+                            th:text="${category.name}"></option>
+                </select>
+                </td>
+            </tr>
+            <tr>
+                <td><input type="submit" value="Create"></td>
+                <td>
+                    <button><a href="/">Cancel</a></button>
+                </td>
+            </tr>
+        </table>
+    </div>
+</form>
+
+</body>
+</html>
