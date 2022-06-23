@@ -16,5 +16,5 @@ for (let i = 0; i <= 17; i++) {
     f1 = f2;
     f2 = fn;
 }
-console.log(sum);
+console.log(`Sum: ${sum}`);
 //# sourceMappingURL=main.js.map
