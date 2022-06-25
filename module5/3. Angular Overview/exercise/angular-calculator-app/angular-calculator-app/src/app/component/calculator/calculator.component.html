@@ -1,0 +1,13 @@
+<h1>Calculator</h1>
+<input type="number" [(ngModel)]="num1">
+<select [value]="operator" (change)="onSelectChange($event.target.value)">
+  <option value="+">+</option>
+  <option value="-">-</option>
+  <option value="*">*</option>
+  <option value="/">/</option>
+</select>
+<input type="number"  [(ngModel)]="num2">
+<br>
+<button (click)="calculate()">Tính</button>
+<h2>Result: {{result}}</h2>
+
