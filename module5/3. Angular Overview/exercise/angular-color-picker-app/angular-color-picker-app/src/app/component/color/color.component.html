@@ -1,0 +1,9 @@
+  <h1>Color Picker</h1>
+  <button (click)="changeColor('orange')" style="background-color: orange" value="orange"></button>
+  <button (click)="changeColor('red')" style="background-color: red" value="red"></button>
+  <button (click)="changeColor('blue')" style="background-color: blue" value="blue"></button>
+  <button (click)="changeColor('yellow')" style="background-color: yellow" value="yellow"></button>
+  <button (click)="changeColor('violet')" style="background-color: violet" value="violet"></button>
+  <div [ngStyle]="{backgroundColor:color}" style="width: 50%;height: 100px">
+   <h2>Color: {{color}}</h2>
+  </div>
