@@ -15,6 +15,9 @@ import { HomeComponent } from './component/home/home.component';
 import { FacilityCreateComponent } from './component/facility/facility-create/facility-create.component';
 import { FacilityEditComponent } from './component/facility/facility-edit/facility-edit.component';
 import { FacilityListComponent } from './component/facility/facility-list/facility-list.component';
+import { EmployeeCreateComponent } from './component/employee/employee-create/employee-create.component';
+import { EmployeeDeleteComponent } from './component/employee/employee-delete/employee-delete.component';
+import { EmployeeListComponent } from './component/employee/employee-list/employee-list.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +33,10 @@ import { FacilityListComponent } from './component/facility/facility-list/facili
     HomeComponent,
     FacilityCreateComponent,
     FacilityEditComponent,
-    FacilityListComponent
+    FacilityListComponent,
+    EmployeeCreateComponent,
+    EmployeeDeleteComponent,
+    EmployeeListComponent
   ],
   imports: [
     BrowserModule,
