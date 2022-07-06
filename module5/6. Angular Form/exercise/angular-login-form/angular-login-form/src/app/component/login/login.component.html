@@ -1,0 +1,8 @@
+<form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+  <h1>Register Form</h1>
+  <input type="email" id="email" name="email" formControlName="email" placeholder="email"><br>
+  <span style="color: red" *ngIf="email&&email.invalid&&email.touched">Email invalid</span><br>
+  <input type="password" id="password" name="password" formControlName="password" placeholder="password"><br>
+  <span style="color: red" *ngIf="password&&password.invalid&&password.touched">password invalid</span><br>
+  <button type="submit" [disabled]="loginForm.invalid">Submit</button>
+</form>

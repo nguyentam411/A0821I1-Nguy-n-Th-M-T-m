@@ -1,31 +1,32 @@
-<form  [formGroup]="contactForm" (ngSubmit)="onSubmit()">
-    <label>Email</label>
-    <input type="email" id="email" name="email" formControlName="email">
-  <p *ngIf="!contactForm.controls.email?.valid"></p>email not valid<br>
-    <label>Password</label>
-    <input type="password" id="password" name="password" formControlName="password">
-  <p>
-    <label>Confirm Password</label>
-    <input type="password" id="confirmPassword" name="confirmPassword" formControlName="confirmPassword">
-  </p>
-  <p>
-    <label>Country</label>
-    <input type="text" id="country" name="country" formControlName="country">
-  </p>
-  <p>
-    <label>Age</label>
-    <input type="number" id="age" name="age" formControlName="age">
-  </p>
-  <p>
-    <label>Gender </label>
-    <input type="radio" value="male" name="gender" formControlName="gender"> Male
-    <input type="radio" value="female" name="gender" formControlName="gender"> Female
-  </p>
-  <p>
-  <label>Phone</label>
-  <input type="number" id="phone" name="phone" formControlName="phone">
-</p>
-  <p>
-    <button type="submit">Submit</button>
-  </p>
+<form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+  <h1>Register Form</h1>
+  <input type="email" id="email" name="email" formControlName="email" placeholder="email"><br>
+  <span style="color: red" *ngIf="email&&email.invalid&&email.touched">Email invalid</span><br>
+  <div formGroupName="pw">
+    <input type="password" id="password" name="password" formControlName="password" placeholder="password"><br>
+    <span style="color: red" *ngIf="password.invalid && password.touched">
+        Password invalid
+      </span><br>
+    <input type="password" id="confirmPassword" name="confirmPassword" formControlName="confirmPassword"
+           placeholder="confirmPassword"><br>
+    <span style="color: red" *ngIf="registerForm.hasError('passwordNotMatch',['pw'])
+            && confirmPassword.dirty">
+      Confirm password not match
+    </span>
+  </div>
+  <label>Country</label><br>
+  <select name="country" id="country" formControlName="country">
+    <option value="Vietnam">VietNam</option>
+    <option value="USA">USA</option>
+    <option value="Canada">Canada</option>
+  </select><br>
+  <span style="color: red" *ngIf="country&&country.invalid&&country.touched">country invalid</span><br>
+  <input type="number" id="age" name="age" formControlName="age" placeholder="age"><br>
+  <span style="color: red" *ngIf="age&&age.invalid&&age.touched">age invalid</span><br>
+  <input type="radio" value="male" name="gender" formControlName="gender"> Male
+  <input type="radio" value="female" name="gender" formControlName="gender"> Female<br>
+  <span style="color: red" *ngIf="gender&&gender.invalid&&gender.touched">gender invalid</span><br>
+  <input type="text" id="phone" name="phone" formControlName="phone" placeholder="phone"><br>
+  <span style="color: red" *ngIf="phone&&phone.invalid&&phone.touched">phone invalid</span><br>
+  <button type="submit" [disabled]="registerForm.invalid">Submit</button>
 </form>
