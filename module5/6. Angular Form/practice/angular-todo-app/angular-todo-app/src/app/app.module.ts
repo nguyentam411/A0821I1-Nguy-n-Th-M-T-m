@@ -6,13 +6,11 @@ import {AppComponent} from './app.component';
 import {TodoComponent} from './component/todo/todo.component';
 import {ReactiveFormsModule} from "@angular/forms";
 import {HttpClientModule} from "@angular/common/http";
-import { TodoCreateComponent } from './component/todo-create/todo-create.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TodoComponent,
-    TodoCreateComponent
   ],
   imports: [
     BrowserModule,

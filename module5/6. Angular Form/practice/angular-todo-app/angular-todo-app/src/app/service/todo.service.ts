@@ -8,21 +8,27 @@ import {map} from "rxjs/operators";
   providedIn: 'root'
 })
 export class TodoService {
-  private readonly API_URL = 'http://localhost:3000/todos';
+  private readonly API_URL = 'http://localhost:3000/todo';
 
   constructor(private http: HttpClient) {
   }
 
   getTodos(): Observable<Todo[]> {
-    return this.http.get<Todo[]>(this.API_URL)
+    return this.http.get<Todo[]>("http://localhost:3000/todos")
   }
 
-  delete(i: number) {
-    return this.http.delete<Todo>("http://localhost:3000/todos/" + i)
+  delete(i: number):Observable<Todo>{
+    return this.http.delete<Todo>("http://localhost:3000/todo/" + i)
   }
 
   save(todo: Todo) {
-    return this.http.put<Todo>("http://localhost:3000/todos",todo)
+    return this.http.put<Todo>("http://localhost:3000/todo",todo)
 
+  }
+  getById(id):Observable<Todo>{
+    return this.http.get<Todo>("http://localhost:3000/todo/"+id);
+  }
+  update(id:number ,todo):Observable<Todo>{
+    return this.http.put<Todo>("http://localhost:3000"+'/todo'+'/'+id, todo);
   }
 }
