@@ -1,0 +1,88 @@
+{
+  "categories": [
+    {
+      "name": "Phone",
+      "id": 1
+    },
+    {
+      "id": 2,
+      "name": "TV"
+    },
+    {
+      "id": 3,
+      "name": "Máy giặt"
+    }
+  ],
+  "products": [
+    {
+      "id": 2,
+      "name": "IPhone 11",
+      "price": 1560000,
+      "description": "Like new"
+    },
+    {
+      "id": 3,
+      "name": "IPhone X",
+      "price": 968000,
+      "description": "97%"
+    },
+    {
+      "id": 4,
+      "name": "IPhone 8",
+      "price": 7540000,
+      "description": "98%"
+    },
+    {
+      "id": 5,
+      "name": "IPhone 11 Pro",
+      "price": 1895000,
+      "description": "Like new"
+    },
+    {
+      "name": "IP 10",
+      "price": 123,
+      "description": "abc",
+      "id": 6
+    },
+    {
+      "id": 7,
+      "name": "adassahjf",
+      "price": 23432,
+      "description": "dsfds"
+    },
+    {
+      "id": 8,
+      "name": "fsdsdg",
+      "price": 2324,
+      "description": "fsdge",
+      "category": {}
+    },
+    {
+      "name": "âsfsfsd",
+      "price": 3242,
+      "description": "sdsđsg",
+      "category": {
+        "id": "1"
+      },
+      "id": 9
+    },
+    {
+      "name": "dfsdg",
+      "price": 32435,
+      "description": "fdsgfd",
+      "category": {
+        "id": "2"
+      },
+      "id": 10
+    },
+    {
+      "name": "aaaaa",
+      "price": 1213,
+      "description": "addsf",
+      "category": {
+        "id": "1"
+      },
+      "id": 11
+    }
+  ]
+}

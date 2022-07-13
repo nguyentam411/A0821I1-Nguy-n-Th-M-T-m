@@ -15,6 +15,7 @@ inputControl=new FormControl();
 
   ngOnInit(): void {
     this.todoServicce.getTodos().subscribe(next=>{
+      console.log(next)
       this.todoList=next;
     },error => {
       console.log(error);
